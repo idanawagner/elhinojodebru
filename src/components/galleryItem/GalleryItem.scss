@@ -1,0 +1,44 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: $spacing-lg;
+    padding: $spacing-lg;
+    justify-items: center;
+}
+
+.gallery-card {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+
+    .gallery-image {
+        width: 100%;
+
+        object-fit: contain;
+        border-radius: 0 3rem 0 0rem;
+        margin-bottom: $spacing-md;
+
+    }
+
+    .gallery-title {
+        font-size: $font-size-md;
+        // font-weight: bold;
+        margin-bottom: $spacing-sm;
+        align-self: flex-start;
+    }
+
+
+    .gallery-description {
+        font-size: $font-size-sm;
+        color: $color-white;
+        text-align: start;
+
+    }
+}

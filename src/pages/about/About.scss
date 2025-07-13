@@ -1,0 +1,120 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: $spacing-xl;
+
+    &-title {
+        grid-column: 1 / -1;
+        font-family: $font-title-heavy;
+        font-size: $font-size-xxl;
+        color: $color-white;
+        margin-bottom: $spacing-xl;
+    }
+
+    &-contentText {
+        grid-column: 1;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        gap: 3rem;
+        align-content: start;
+        margin-top: 4rem;
+
+        .text1 {
+            &::before {
+                content: '1890';
+                position: absolute;
+                top: 45%;
+                left: 6%;
+                font-family: $font-title-bold;
+                font-size: 6rem;
+                color: $color-white;
+                opacity: 0.3;
+                z-index: 0;
+                pointer-events: none;
+                white-space: nowrap;
+            }
+        }
+
+        .text2 {
+            &::before {
+                content: '1900';
+                position: absolute;
+                top: 85%;
+                left: 40%;
+                font-family: $font-title-bold;
+                font-size: 6rem;
+                color: $color-white;
+                opacity: 0.3;
+                z-index: 0;
+                pointer-events: none; // no interfiere con clics
+                white-space: nowrap;
+            }
+        }
+
+        .text3 {
+            &::before {
+                content: '2025';
+                position: absolute;
+                top: 120%;
+                left: 3%;
+                font-family: $font-title-bold;
+                font-size: 6rem;
+                color: $color-white;
+                opacity: 0.3;
+                z-index: 0;
+                pointer-events: none;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &-contentImages {
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        align-items: center;
+
+        .container-image1,
+        .container-image2,
+        .container-image3 {
+            position: relative;
+            width: 27%;
+
+            p {
+                font-family: $font-title-bold;
+                margin-right: 2rem;
+            }
+        }
+
+        .container-image1 img,
+        .container-image2 img,
+        .container-image3 img {
+            width: 100%;
+            // border-radius: 0 3rem 0 0;
+            margin-bottom: $spacing-sm;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 3px solid $color-yellow;
+        }
+
+        .container-image1 {
+            margin-right: 15rem;
+
+        }
+
+
+        .container-image2 {
+            margin-left: 1rem;
+            top: -10rem;
+        }
+
+        .container-image3 {
+            margin-left: 17rem;
+            top: -20rem;
+        }
+    }
+}

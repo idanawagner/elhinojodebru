@@ -1,0 +1,52 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+// // Utilidades de texto
+// .title-xl {
+//     font-size: $font-size-xl;
+//     font-weight: bold;
+// }
+
+// .title-lg {
+//     font-size: $font-size-lg;
+//     font-weight: bold;
+// }
+
+// .text-sm {
+//     font-size: $font-size-sm;
+// }
+
+// .text-md {
+//     font-size: $font-size-md;
+// }
+
+// // Botones
+// .btn-primary {
+//     @include button($color-primary, $color-white);
+// }
+
+// .btn-secondary {
+//     @include button($color-secondary, $color-white);
+// }
+
+.tabs {
+    &.custom-tabs {
+        justify-self: center;
+        width: 50%;
+
+        .MuiTabs-indicator {
+            background-color: $color-yellow; // más específico, pisa sin !important
+        }
+    }
+
+    .custom-tab {
+        font-family: $font-title-bold;
+        color: $color-white;
+        text-transform: none;
+        ;
+
+        &.Mui-selected {
+            color: $color-yellow;
+        }
+    }
+}

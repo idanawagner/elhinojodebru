@@ -1,0 +1,158 @@
+@use './variables' as *;
+@use "sass:color";
+
+@mixin mobile {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 576px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 992px) and (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin big-desktop {
+    @media (min-width: 1441px) {
+        @content;
+    }
+}
+
+// Mixin para contenedor principal
+@mixin container($max-width: 1200px, $padding: $spacing-md) {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: $padding;
+}
+
+
+// Mixin para texto centrado
+@mixin text-center($color: $color-black, $font: $font-text, $size: $font-size-md) {
+    text-align: center;
+    color: $color;
+    font-family: $font;
+    font-size: $size;
+}
+
+@mixin responsive-padding($pad: $spacing-md) {
+    & {
+        padding: $pad;
+    }
+
+    // padding: $pad;
+
+    @include mobile {
+        padding: $spacing-sm; // Menos padding en móviles
+    }
+
+    @include tablet {
+        padding: $spacing-md; // Padding estándar en tabletas
+    }
+
+    @include desktop {
+        padding: $spacing-lg; // Más padding en pantallas grandes
+    }
+}
+
+// Mixin para imagen responsiva
+@mixin responsive-image($width: 100%, $height: auto) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+// Mixin para grid responsivo
+@mixin responsive-grid($columns: 1, $gap: $spacing-md) {
+
+    & {
+
+        display: grid;
+        grid-template-columns: repeat($columns, 1fr);
+        gap: $gap;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr; // Una columna en móviles
+    }
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr); // Dos columnas en tabletas
+    }
+
+    // @include desktop {
+    //     grid-template-columns: repeat(3, 1fr); // Tres columnas en pantallas medianas
+    // }
+}
+
+@mixin responsive-height($height: 100vh) {
+    & {
+
+        height: $height;
+    }
+
+    @include mobile {
+        height: auto; // Ajustar altura en móviles
+    }
+
+    @include tablet {
+        height: auto; // Ajustar altura en tabletas
+    }
+
+    @include desktop {
+        height: $height; // Mantener altura en pantallas grandes
+    }
+}
+
+
+// Mixin para botón básico
+@mixin button($bg: $color-primary, $color: $color-black) {
+    background-color: $bg;
+    color: $color;
+    border: none;
+    padding: $spacing-md $spacing-xl;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: $font-size-md;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: $font-button;
+
+    &:hover {
+        background-color: color.scale($bg, $lightness: -10%);
+    }
+}
+
+// Mixin para texto de título
+@mixin title($font: $font-title-bold, $size: $font-size-xl, $color: $color-black) {
+    font-size: $size;
+    color: $color;
+    text-align: start;
+    font-family: $font;
+}
+
+// Mixin para texto de párrafo
+@mixin paragraph($font: $font-text, $size: $font-size-md, $color: $color-black) {
+    font-size: $size;
+    color: $color;
+    font-family: $font;
+    line-height: 2;
+    text-align: start;
+    max-width: 100%;
+    margin-bottom: $spacing-lg;
+}
+
+// // Mixin para flexbox centrado
+// @mixin flex-center {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }

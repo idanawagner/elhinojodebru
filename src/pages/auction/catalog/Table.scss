@@ -1,0 +1,37 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.table-container {
+    overflow-x: auto;
+    padding: 1rem;
+
+    table {
+        border-collapse: separate; // importante para que funcione border-spacing
+        border-spacing: 8px 8px; // espacio entre celdas
+        width: 100%;
+        min-width: 600px;
+    }
+
+    thead {
+        tr {
+            th {
+                background: linear-gradient(90deg, $color-yellow-light 0%, $color-white 100%);
+                color: $color-black;
+                font-weight: bold;
+                border-radius: 8px;
+                padding: 12px 16px;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                background: linear-gradient(90deg, $color-white 0%, $color-yellow-light 100%);
+                border-radius: 8px;
+                padding: 12px 16px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}

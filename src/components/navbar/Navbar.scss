@@ -1,0 +1,46 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/utilities' as *;
+
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba($color-black, 0.1);
+    padding: .5rem 2rem !important;
+}
+
+.submenu-menu {
+    top: 80px !important; // Asegura que el menú se alinee al borde superior
+    background-color: white;
+    width: 100vw !important; // ocupa todo el ancho de la ventana
+    left: 0 !important; // alinear al borde izquierdo
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem; // espacio entre subitems
+    height: 10% !important; // altura fija para el menú
+
+    .MuiPaper-root {
+        top: 25% !important; // Asegura que el menú se alinee al borde superior
+    }
+
+    .MuiMenuItem-root {
+        white-space: nowrap;
+        padding-inline: 2rem;
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    color: $color-white;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+        color: $color-secondary;
+    }
+}

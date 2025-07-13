@@ -1,0 +1,42 @@
+@use '@/styles/variables' as *;
+@use '@/styles/fonts' as *;
+
+
+.slider-component {
+    width: 100%;
+    padding: 2rem;
+
+    .slider-card {
+        background: transparent;
+        padding: 1rem;
+        border-radius: 8px;
+        text-align: start;
+        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        &:active,
+        :focus {
+            cursor: move;
+            border: none;
+        }
+
+        img {
+            width: 100%;
+
+            object-fit: cover;
+            // border-radius: 0 3rem 0 0;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-family: $font-title-bold;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: $color-white;
+            font-family: $font-text;
+        }
+    }
+}

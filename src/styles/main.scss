@@ -1,0 +1,44 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './utilities' as *;
+@use './fonts' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: inline-block;
+
+    height: 100vh;
+
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+
+    animation: scroll 10s ease-in-out 10s;
+
+    @include mobile {
+        font-size: 50%;
+    }
+
+    @include tablet {
+        font-size: 70%;
+    }
+
+    @include desktop {
+        font-size: 100%;
+    }
+
+    @include big-desktop {
+        font-size: 120%;
+    }
+}
+
+body {
+    font-family: $font-main;
+    background-color: $color-primary-bg;
+    color: $color-white;
+}

@@ -1,0 +1,88 @@
+@use '@/styles/mixins' as *;
+
+.footer {
+    background-color: $color-primary-bg;
+    font-size: 1.2rem;
+
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    display: flex;
+    @include responsive-height(30vh);
+
+
+    &-content {
+        gap: 1rem;
+        align-items: center;
+        padding: 0 $spacing-lg;
+        @include responsive-grid($columns: 2);
+
+        .footer-logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 1rem;
+
+
+            img {
+                width: 40%;
+                height: auto;
+            }
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            gap: 1rem;
+            flex-direction: column;
+
+            a {
+                color: $color-yellow !important; // Cambia el color de los iconos
+                text-decoration: none; // Elimina el subrayado
+                transition: color 0.3s;
+                display: flex;
+                flex-direction: row;
+                width: max-content;
+                align-items: center;
+                gap: 1rem;
+
+                &:hover {
+                    color: $color-white; // Cambia el color al pasar el mouse
+                }
+            }
+
+            span {
+                color: $color-yellow !important; // Cambia el color del texto
+                font-size: 2rem; // Tamaño de fuente más pequeño
+                text-align: center; // Centra el texto debajo del icono
+            }
+        }
+
+        .footer-credits {
+            display: flex;
+            justify-content: flex-start;
+            font-size: .8rem;
+            color: $color-white;
+            font-family: $font-title-bold;
+            align-self: center;
+            width: 100%;
+
+            @include mobile {
+                justify-content: flex-end;
+            }
+
+            a {
+                color: inherit; // Mantiene el color del texto
+                text-decoration: none; // Elimina el subrayado
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $color-secondary; // Cambia el color al pasar el mouse
+                }
+            }
+        }
+    }
+
+
+}

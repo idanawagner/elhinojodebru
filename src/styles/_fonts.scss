@@ -1,0 +1,25 @@
+@use "sass:string";
+
+@mixin font-face($name, $fileName) {
+    $fileName: "../assets/fonts/" + $fileName;
+
+    @font-face {
+        font-family: string.quote($name);
+        src: url(string.quote($fileName + ".woff2")) format("woff2"),
+            url(string.quote($fileName + ".woff")) format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+}
+
+@include font-face("Raleway-ExtraBold", "Raleway-ExtraBold");
+@include font-face("Raleway-Heavy", "Raleway-Heavy");
+@include font-face("Raleway-Bold", "Raleway-Bold");
+@include font-face("Raleway-Light", "Raleway-Light");
+@include font-face("Raleway-Regular", "Raleway-Regular");
+@include font-face("Raleway-SemiBold", "Raleway-SemiBold");
+@include font-face("Glacial-Indifference-Regular", "Glacial-Indifference-Regular");
+@include font-face("Glacial-Indifference-Bold", "Glacial-Indifference-Bold");
+@include font-face("Poppins-Regular", "Poppins-Regular");
+@include font-face("Poppins-Bold", "Poppins-Bold");
