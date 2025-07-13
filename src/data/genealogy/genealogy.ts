@@ -1,50 +1,63 @@
+import one from '@/assets/images/genealogy/catalogo2023_page-0003.jpg';
+import two from '@/assets/images/genealogy/catalogo2023_page-0004.jpg';
+import three from '@/assets/images/genealogy/catalogo2023_page-0005.jpg';
+import four from '@/assets/images/genealogy/catalogo2023_page-0006.jpg';
+import five from '@/assets/images/genealogy/catalogo2023_page-0007.jpg';
+import six from '@/assets/images/genealogy/catalogo2023_page-0008.jpg';
+import seven from '@/assets/images/genealogy/catalogo2023_page-0009.jpg';
+import eight from '@/assets/images/genealogy/catalogo2023_page-0010.jpg';
+import nine from '@/assets/images/genealogy/catalogo2023_page-0011.jpg';
+import ten from '@/assets/images/genealogy/catalogo2023_page-0012.jpg';
+import eleven from '@/assets/images/genealogy/catalogo2023_page-0013.jpg';
+import twelve from '@/assets/images/genealogy/catalogo2023_page-0014.jpg';
+
 export const genealogy = [
     {
         id: 1,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0003.jpg',
+        image: one,
     },
     {
         id: 2,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0004.jpg',
+        image: two,
     },
     {
         id: 3,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0005.jpg',
+        image: three,
     },
     {
         id: 4,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0006.jpg',
+        image: four,
     },
     {
         id: 5,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0007.jpg',
+        image: five,
     },
     {
         id: 6,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0008.jpg',
+        image: six,
     },
     {
         id: 7,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0009.jpg',
+        image: seven,
     },
     {
         id: 8,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0010.jpg',
+        image: eight,
     },
     {
         id: 9,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0011.jpg',
+        image: nine,
     },
     {
         id: 10,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0012.jpg',
+        image: ten,
     },
     {
         id: 11,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0013.jpg',
+        image: eleven,
     },
     {
         id: 12,
-        image: '/src/assets/images/genealogy/catalogo2023_page-0014.jpg',
+        image: twelve,
     },
 ];

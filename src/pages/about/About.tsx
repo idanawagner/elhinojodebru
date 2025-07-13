@@ -1,3 +1,7 @@
+import DonJaimeBru from '@/assets/images/about/DonJaimeBru.png';
+import DonEmilioBru from '@/assets/images/about/DonEmilioBru.png';
+import DonLuisJaimeBru from '@/assets/images/about/DonLuisJaimeBru.png';
+
 import './About.scss';
 
 const About = () => {
@@ -40,7 +44,7 @@ const About = () => {
             <div className="about-contentImages">
                 <div className="container-image1">
                     <img
-                        src="/src/assets/images/about/DonJaimeBru.png"
+                        src={DonJaimeBru}
                         alt="Don Jaime Bru"
                         className="image1"
                     />
@@ -48,7 +52,7 @@ const About = () => {
                 </div>
                 <div className="container-image2">
                     <img
-                        src="/src/assets/images/about/DonEmilioBru.png"
+                        src={DonEmilioBru}
                         alt="Don Emilio Bru"
                         className="image2"
                     />
@@ -56,7 +60,7 @@ const About = () => {
                 </div>
                 <div className="container-image3">
                     <img
-                        src="/src/assets/images/about/DonLuisJaimeBru.png"
+                        src={DonLuisJaimeBru}
                         alt="Don Luis Jaime Bru"
                         className="about-image3"
                     />
