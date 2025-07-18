@@ -1,0 +1,243 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/utilities' as *;
+
+
+.history {
+
+    h1 {
+        color: $color-primary;
+        font-size: 2.5rem;
+        margin-block: $spacing-lg;
+        @include title($color: $color-primary, $font: $font-title-heavy, $size: $font-size-xl);
+        text-align: center;
+    }
+
+    &-start {
+        gap: 3rem;
+        margin: 0;
+        display: grid;
+        position: relative;
+        @include paragraph($color: $color-primary, $size: $font-size-md);
+        // @include responsive-height (100vh);
+        @include responsive-padding($spacing-xl);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('@/assets/images/history/history-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.9;
+            z-index: -1;
+            filter: blur(5px);
+
+            @include responsive-image($width: 100%, $height: auto);
+
+        }
+
+    }
+
+    &-1930 {
+        position: relative;
+        // padding: $spacing-xl;
+        @include responsive-padding($spacing-xl);
+
+        &::before {
+            content: '1930';
+            @include numbers-bg($opacity: 0.1, $color: $color-white, $size: 6rem);
+            top: 0%;
+            left: 6%;
+        }
+
+        &::after {
+            content: '1930';
+            @include numbers-bg($opacity: 0.3, $size: 8rem);
+            bottom: 0%;
+            right: 6%;
+        }
+
+        p {
+            @include paragraph($color: $color-white);
+
+
+        }
+    }
+
+    &-1962 {
+        position: relative;
+        margin-block: $spacing-xl;
+        @include responsive-padding(0 $spacing-xl);
+
+        @include responsive-grid($columns: 2);
+
+        @include mobile {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .medals {
+            grid-column: 1;
+
+
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 100%; // Ajusta el tamaño máximo según sea necesario
+            }
+        }
+
+        p {
+            align-content: center;
+            @include paragraph($color: $color-white);
+
+        }
+    }
+
+    &-1966 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-block: $spacing-xl;
+        position: relative;
+        @include paragraph($color: $color-primary, $size: $font-size-md);
+        @include responsive-padding($spacing-xl);
+        @include responsive-height (70vh);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('@/assets/images/history/history-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.9;
+            z-index: -1;
+            filter: blur(5px);
+            @include responsive-image($width: 100%, $height: auto);
+
+        }
+    }
+
+    .evesnor {
+        position: relative;
+        margin-block: $spacing-xl;
+        @include responsive-padding(0 $spacing-xl);
+        @include responsive-grid($columns: 2);
+
+        img {
+            @include responsive-image($width: 100%, $height: auto);
+        }
+
+        p {
+            @include paragraph($color: $color-white, $size: $font-size-md);
+            align-content: center;
+            margin-top: $spacing-md;
+        }
+    }
+
+    &-1980 {
+        position: relative;
+        margin-block: $spacing-xl;
+        @include responsive-padding($spacing-xl);
+        @include responsive-grid($columns: 2);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('@/assets/images/history/1980.png');
+            background-size: contain;
+            background-position: unset;
+            background-repeat: no-repeat;
+            z-index: 0;
+
+            @include mobile {
+                background-position: bottom;
+            }
+
+
+        }
+
+        p {
+            grid-column: 2;
+
+            @include paragraph($color: $color-white);
+        }
+    }
+
+    &-1989 {
+        position: relative;
+        background-color: $color-bg-secondary;
+        @include responsive-padding($spacing-xl);
+        @include responsive-grid($columns: 2);
+
+        img {
+            @include responsive-image($width: 100%, $height: auto);
+        }
+
+        p {
+            @include paragraph($color: $color-primary, $size: $font-size-md);
+            align-content: center;
+            margin-top: $spacing-md;
+        }
+    }
+
+    &-1995 {
+        position: relative;
+        @include responsive-padding($spacing-xl);
+        @include responsive-grid($columns: 2);
+
+        &::before {
+            content: '1995';
+            @include numbers-bg($opacity: 0.3, $size: 8rem);
+            top: 0%;
+            left: 6%;
+        }
+
+        img {
+            @include responsive-image($width: 100%, $height: auto);
+        }
+
+        p {
+            @include paragraph($color: $color-white, $size: $font-size-md);
+            align-content: center;
+            margin-top: $spacing-md;
+        }
+    }
+
+    &-2000 {
+        position: relative;
+        height: 50vh;
+        @include responsive-padding($spacing-xl);
+        @include responsive-grid($columns: 1);
+
+        &::before {
+            content: 'Erdrum of Eastfield';
+            @include numbers-bg($size: 8rem);
+            top: 0%;
+            display: flex;
+            justify-self: center;
+            white-space: normal;
+        }
+
+        &::after {
+            content: '2000';
+            @include numbers-bg($color: $color-white, $size: 8rem);
+            top: 60%;
+            right: 6%;
+
+        }
+
+        p {
+            @include paragraph($color: $color-white);
+            margin-top: 7rem;
+            align-content: center;
+            text-align: center
+        }
+
+    }
+}

@@ -2,16 +2,20 @@
 @use '@/styles/mixins' as *;
 
 .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     margin: $spacing-xl;
+    overflow-x: hidden;
+    @include responsive-grid($columns: 2);
 
     &-title {
-        grid-column: 1 / -1;
+        grid-column: 1;
         font-family: $font-title-heavy;
         font-size: $font-size-xxl;
         color: $color-white;
         margin-bottom: $spacing-xl;
+
+        @include mobile {
+            grid-column: auto;
+        }
     }
 
     &-contentText {
@@ -21,6 +25,10 @@
         gap: 3rem;
         align-content: start;
         margin-top: 4rem;
+
+        @include mobile {
+            grid-column: auto;
+        }
 
         .text1 {
             &::before {
@@ -69,6 +77,26 @@
                 white-space: nowrap;
             }
         }
+
+        @include mobile {
+            .text1::before {
+                top: 47%;
+                left: 5%;
+                font-size: 4rem;
+            }
+
+            .text2::before {
+                top: 72%;
+                left: 67%;
+                font-size: 4rem;
+            }
+
+            .text3::before {
+                top: 96%;
+                left: 5%;
+                font-size: 4rem;
+            }
+        }
     }
 
     &-contentImages {
@@ -78,6 +106,10 @@
         align-items: flex-start;
         position: relative;
         align-items: center;
+
+        @include mobile {
+            grid-column: auto;
+        }
 
         .container-image1,
         .container-image2,
@@ -116,5 +148,29 @@
             margin-left: 17rem;
             top: -20rem;
         }
+
+        // @include mobile {
+
+        //     .container-image1,
+        //     .container-image2,
+        //     .container-image3 {
+        //         width: 80%;
+        //         margin: 0 auto;
+        //     }
+
+        //     .container-image1 {
+        //         margin-right: 0;
+        //     }
+
+        //     .container-image2 {
+        //         top: 0;
+        //         margin-left: 0;
+        //     }
+
+        //     .container-image3 {
+        //         top: 0;
+        //         margin-left: 0;
+        //     }
+        // }
     }
 }
