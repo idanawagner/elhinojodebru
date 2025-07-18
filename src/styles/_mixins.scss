@@ -26,21 +26,21 @@
 }
 
 // Mixin para contenedor principal
-@mixin container($max-width: 1200px, $padding: $spacing-md) {
-    width: 100%;
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: $padding;
-}
+// @mixin container($max-width: 1200px, $padding: $spacing-md) {
+//     width: 100%;
+//     max-width: $max-width;
+//     margin: 0 auto;
+//     padding: $padding;
+// }
 
 
 // Mixin para texto centrado
-@mixin text-center($color: $color-black, $font: $font-text, $size: $font-size-md) {
-    text-align: center;
-    color: $color;
-    font-family: $font;
-    font-size: $size;
-}
+// @mixin text-center($color: $color-black, $font: $font-text, $size: $font-size-md) {
+//     text-align: center;
+//     color: $color;
+//     font-family: $font;
+//     font-size: $size;
+// }
 
 @mixin responsive-padding($pad: $spacing-md) {
     & {
@@ -50,7 +50,7 @@
     // padding: $pad;
 
     @include mobile {
-        padding: $spacing-sm; // Menos padding en móviles
+        padding: $spacing-lg; // Menos padding en móviles
     }
 
     @include tablet {
@@ -58,7 +58,7 @@
     }
 
     @include desktop {
-        padding: $spacing-lg; // Más padding en pantallas grandes
+        padding: $spacing-xl; // Más padding en pantallas grandes
     }
 }
 
@@ -144,15 +144,21 @@
     font-size: $size;
     color: $color;
     font-family: $font;
+    font-weight: 500;
     line-height: 2;
     text-align: start;
     max-width: 100%;
     margin-bottom: $spacing-lg;
 }
 
-// // Mixin para flexbox centrado
-// @mixin flex-center {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
+@mixin numbers-bg($opacity: 0.1, $color: $color-white, $size: 6rem) {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: $opacity;
+    color: $color;
+    font-family: $font-title-extraBold;
+    font-size: $size;
+
+}
