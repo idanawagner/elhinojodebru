@@ -114,9 +114,7 @@ const History = () => {
                     de Firpo.
                 </p>
 
-                <div>
-                    <img src={sperm} alt="Sperm-photo" />
-                </div>
+                <img src={sperm} alt="Sperm-photo" />
             </div>
             <div className="history-2000">
                 <p>

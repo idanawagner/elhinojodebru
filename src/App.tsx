@@ -12,6 +12,9 @@ import TabsGallery from './pages/institutional/gallery/TabsGallery';
 
 import Genealogy from './pages/auction/Genealogy';
 import Catalog from './pages/auction/catalog/Catalog';
+import Press from './pages/institutional/press/Press';
+import FullArticle from './components/fullArticle/FullArticle';
+import Contact from './pages/contact/Contact';
 
 function App() {
     return (
@@ -21,23 +24,19 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/history" element={<History />} />
-                <Route path="/visits" element={<Visits />} />
+                <Route path="/institutional/visits" element={<Visits />} />
                 <Route
                     path="/institutional/photos-gallery"
-                    element={<TabsGallery />} // Placeholder for PhotosGallery component
+                    element={<TabsGallery />}
                 />
+                <Route path="/institutional/press" element={<Press />} />
                 <Route
-                    path="/institutional/press-articles"
-                    element={<div>Press Articles</div>} // Placeholder for PressArticles component
+                    path="/institutional/press/article/:id"
+                    element={<FullArticle />}
                 />
-                <Route
-                    path="/auction/catalog"
-                    element={<Catalog />} // Placeholder for PressReleases component
-                />
-                <Route
-                    path="/auction/genealogy"
-                    element={<Genealogy />} // Placeholder for Genealogy component
-                />
+                <Route path="/auction/catalog" element={<Catalog />} />
+                <Route path="/auction/genealogy" element={<Genealogy />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer />
         </div>

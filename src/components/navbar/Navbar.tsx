@@ -36,7 +36,7 @@ const navLinks = [
                 label: 'Galería de Fotos',
                 path: '/institutional/photos-gallery',
             },
-            { label: 'Prensa', path: '/institutional/press-articles' },
+            { label: 'Prensa', path: '/institutional/press' },
             { label: 'Visitas', path: '/institutional/visits' },
         ],
     },
@@ -233,6 +233,7 @@ export default function Navbar() {
                                     >
                                         {item.submenu.map((subitem) => (
                                             <Link
+                                                key={subitem.label}
                                                 to={subitem.path}
                                                 style={{
                                                     textDecoration: 'none',

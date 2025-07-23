@@ -151,7 +151,8 @@
     margin-bottom: $spacing-lg;
 }
 
-@mixin numbers-bg($opacity: 0.1, $color: $color-white, $size: 6rem) {
+@mixin numbers-bg($opacity: 0.1, $color: $color-white, $size: $font-size-6rem) {
+
     position: absolute;
     z-index: 0;
     pointer-events: none;
@@ -160,5 +161,7 @@
     color: $color;
     font-family: $font-title-extraBold;
     font-size: $size;
+
+
 
 }

@@ -1,0 +1,33 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.visits {
+
+    padding: $spacing-xl;
+
+    &::before {
+        position: absolute;
+        inset: 0;
+        content: '';
+        background-image: url(../../../assets/images/visits-home.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: grayscale(100);
+        opacity: 0.1;
+        z-index: -1;
+    }
+
+    &-title {
+        font-family: $font-title-heavy;
+        font-size: $font-size-xxl;
+        color: $color-white;
+        margin-bottom: $spacing-xl;
+
+
+    }
+
+    &-text {
+        @include paragraph($color: $color-white, $size: $font-size-md);
+
+    }
+}

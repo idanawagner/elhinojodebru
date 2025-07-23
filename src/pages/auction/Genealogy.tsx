@@ -1,5 +1,5 @@
 import SliderComponent from '@/components/sliderComponent/SliderComponent';
-import { genealogy } from '@/data/genealogy/genealogy';
+import { genealogy } from '@/data/genealogy-data';
 const Genealogy = () => {
     const settings = {
         dots: false,

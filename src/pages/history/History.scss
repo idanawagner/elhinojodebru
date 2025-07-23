@@ -47,14 +47,14 @@
 
         &::before {
             content: '1930';
-            @include numbers-bg($opacity: 0.1, $color: $color-white, $size: 6rem);
+            @include numbers-bg($opacity: 0.1, $color: $color-white, $size: $font-size-6rem);
             top: 0%;
             left: 6%;
         }
 
         &::after {
             content: '1930';
-            @include numbers-bg($opacity: 0.3, $size: 8rem);
+            @include numbers-bg($opacity: 0.3, $size: $font-size-8rem);
             bottom: 0%;
             right: 6%;
         }
@@ -175,6 +175,13 @@
         @include responsive-padding($spacing-xl);
         @include responsive-grid($columns: 2);
 
+        &::before {
+            content: '1989';
+            @include numbers-bg($color: $color-primary, $opacity: 0.3, $size: $font-size-8rem);
+            bottom: 10%;
+            right: 10%;
+        }
+
         img {
             @include responsive-image($width: 100%, $height: auto);
         }
@@ -193,7 +200,7 @@
 
         &::before {
             content: '1995';
-            @include numbers-bg($opacity: 0.3, $size: 8rem);
+            @include numbers-bg($opacity: 0.3, $size: $font-size-8rem);
             top: 0%;
             left: 6%;
         }
@@ -212,21 +219,30 @@
     &-2000 {
         position: relative;
         height: 50vh;
+
         @include responsive-padding($spacing-xl);
         @include responsive-grid($columns: 1);
 
+        @include mobile {
+            height: auto;
+        }
+
         &::before {
             content: 'Erdrum of Eastfield';
-            @include numbers-bg($size: 8rem);
+            @include numbers-bg($size: $font-size-8rem);
             top: 0%;
             display: flex;
             justify-self: center;
             white-space: normal;
+
+            @include mobile {
+                font-size: $font-size-xxl;
+            }
         }
 
         &::after {
             content: '2000';
-            @include numbers-bg($color: $color-white, $size: 8rem);
+            @include numbers-bg($color: $color-white, $size: $font-size-8rem);
             top: 60%;
             right: 6%;
 
@@ -236,8 +252,14 @@
             @include paragraph($color: $color-white);
             margin-top: 7rem;
             align-content: center;
-            text-align: center
+            text-align: center;
+
+            @include mobile {
+                margin-top: 0rem;
+            }
         }
+
+
 
     }
 }

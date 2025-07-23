@@ -1,0 +1,23 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/utilities' as *;
+
+
+.press {
+    padding: $spacing-xl;
+
+    &-title {
+        text-align: center;
+        @include title($color: $color-white);
+        margin-bottom: $spacing-lg;
+    }
+
+    &-grid {
+
+        @include responsive-grid($columns: 3, $gap: $spacing-lg);
+
+
+    }
+
+
+}

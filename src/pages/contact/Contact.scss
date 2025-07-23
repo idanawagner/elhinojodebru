@@ -1,0 +1,90 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/utilities' as *;
+
+
+.contact {
+    padding: $spacing-xl;
+
+    // background-color: #fefefe;
+
+    &-title {
+        font-family: $font-title-heavy;
+        font-size: $font-size-xxl;
+        color: $color-white;
+        margin-bottom: $spacing-xl;
+        @include title($color: $color-white, $font: $font-title-heavy, $size: $font-size-xl);
+
+
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 4rem;
+
+        div {
+            border-left: 4px solid #ccc;
+            padding-left: 1.5rem;
+            transition: border-color 0.3s ease;
+
+            &:hover {
+                border-color: $color-yellow;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                // color: #0077cc;
+            }
+
+            p {
+                // margin-bottom: 1rem;
+                font-size: 1rem;
+                // color: $color-white;
+
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    // color: $color-white;
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+                    @include paragraph($color: $color-white);
+                    margin: .5rem 1rem;
+
+                    &:hover {
+                        color: $color-yellow;
+                        transform: scale(1.07);
+                    }
+                }
+            }
+        }
+    }
+
+    .map-container {
+        text-align: center;
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+    }
+
+    @media (max-width: 600px) {
+        padding: 2rem 1rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .map-container iframe {
+            height: 320px;
+            width: 80%;
+        }
+    }
+}
