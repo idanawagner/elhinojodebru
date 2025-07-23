@@ -1,3 +1,3 @@
-export { torosPadres } from './torosPadres';
-export { torosEnCentros } from './torosEnCentros';
-export { madres } from './madres';
+export { torosPadres } from './torosPadres-data';
+export { torosEnCentros } from './torosEnCentros-data';
+export { madres } from './madres-data';

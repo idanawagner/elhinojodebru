@@ -1,0 +1,77 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/utilities' as *;
+
+.article-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 6rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    background-color: $color-bg-secondary;
+    color: $color-primary;
+
+    .article-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        text-align: center;
+
+        h1 {
+            font-size: $font-size-lg;
+            color: $color-primary;
+            margin-bottom: 0.5rem;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    }
+
+    // .content {
+    //     font-family: inherit;
+    //     white-space: pre-wrap;
+    //     /* permite que el texto se ajuste si es largo */
+    //     word-break: break-word;
+    //     line-height: 1.6;
+    // }
+
+    .article-intro {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+    }
+
+    .article-image {
+        max-width: 40%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .intro-text {
+        flex: 1;
+        min-width: 300px;
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+    }
+
+    .article-content {
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+    }
+
+}

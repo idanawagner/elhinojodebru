@@ -5,7 +5,7 @@ import SectionVisits from './Sections/SectionVisits';
 import SectionTestimonials from './Sections/SectionTestimonials';
 import Hero from './Sections/Hero';
 import SliderComponent from '@/components/sliderComponent/SliderComponent';
-import { torosPadres } from '@/data/gallery/torosPadres';
+import { torosPadres } from '@/data/gallery/torosPadres-data';
 const Home = () => {
     return (
         <>

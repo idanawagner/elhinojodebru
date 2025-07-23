@@ -22,10 +22,7 @@ const SectionPressArticle = () => {
                         realizada por la revista Informe Ganadero.
                     </p>
                     <p className="button-container">
-                        <Link
-                            className="button"
-                            to="/press/recuerdos-del-futuro"
-                        >
+                        <Link className="button" to="/institutional/press">
                             Leer artículo completo
                         </Link>
                     </p>
