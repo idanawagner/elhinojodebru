@@ -1,5 +1,5 @@
 import img1 from '@/assets/images/press/article-1.png';
-import img2 from '@/assets/images/press/luisJaime.png';
+import img2 from '@/assets/images/press/luisjaime.png';
 import img3 from '@/assets/images/press/article-3.png';
 
 export const articles = [
