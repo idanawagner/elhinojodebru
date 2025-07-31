@@ -1,36 +1,81 @@
 @use '@/styles/variables' as *;
 @use '@/styles/mixins' as *;
 
+
 .table-container {
     overflow-x: auto;
-    padding: 1rem;
+
+    .search {
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-self: flex-end;
+
+        label {
+            color: $color-white;
+        }
+
+        input {
+            color: $color-white;
+        }
+
+        .MuiOutlinedInput-root {
+            fieldset {
+                border-color: $color-white;
+            }
+
+            &:hover fieldset {
+                border-color: $color-yellow;
+            }
+
+            &.Mui-focused fieldset {
+                border-color: $color-yellow;
+            }
+        }
+    }
 
     table {
-        border-collapse: separate; // importante para que funcione border-spacing
-        border-spacing: 8px 8px; // espacio entre celdas
+        border-collapse: separate; // importante para que funcione 
+        border-spacing: 0px 8px; // espacio entre celdas
         width: 100%;
-        min-width: 600px;
+        background-color: $color-bg-secondary;
+        padding: 0 .5rem;
+
     }
 
     thead {
         tr {
             th {
-                background: linear-gradient(90deg, $color-yellow-light 0%, $color-white 100%);
-                color: $color-black;
+                background: $color-yellow-light;
+                // color: $color-black;
                 font-weight: bold;
-                border-radius: 8px;
-                padding: 12px 16px;
+                // border-radius: 8px;
+                padding: 1rem;
             }
         }
     }
 
     tbody {
+
         tr {
+            border: 2px solid $color-yellow-light;
+            // border-radius: 8px;
+            overflow: hidden;
+
             td {
-                background: linear-gradient(90deg, $color-white 0%, $color-yellow-light 100%);
-                border-radius: 8px;
-                padding: 12px 16px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                border: 2px solid $color-yellow-light;
+
+                flex: 1;
+
+                &:first-child {
+                    background: $color-yellow-light;
+                    padding: .5rem 1rem;
+                }
+
+
+                &:not(:first-child) {
+                    background: linear-gradient(90deg, $color-yellow-light 0%, $color-white 100%);
+                }
             }
         }
     }

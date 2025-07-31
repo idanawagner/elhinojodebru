@@ -2,79 +2,154 @@
 @use '@/styles/mixins' as *;
 @use '@/styles/utilities' as *;
 
-.hero {
-  // top: -5rem;
 
-  display: grid;
-  grid-template-rows: 1fr auto;
-  // position: relative;
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  // display: grid;
+  // grid-template-rows: 1fr auto;
+  position: relative;
   z-index: 0;
   @include responsive-height(100vh);
+  height: 100vh;
+  top: -3rem;
 
-
-
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('@/assets/images/hero-background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.7;
-    z-index: -1;
-  }
-
-  &-content {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-    padding: $spacing-lg;
-    color: $color-white;
-    position: relative;
-    z-index: 1;
-    align-content: center;
-    @include responsive-grid($columns: 2);
-
-
-    .hero-text {
-      color: $color-white;
-      text-align: center;
-      margin-bottom: $spacing-lg;
-      max-width: 70%; // ancho máximo para que no se estire demasiado
-      margin: 0 auto; // centrar el texto horizontalmente
-      grid-column: 2 / 3; // ocupar la segunda columna
-
-      h1 {
-        font-size: $font-size-xl;
-        margin-bottom: $spacing-md;
-      }
-
-      p {
-        font-size: $font-size-lg;
-        margin-bottom: $spacing-lg;
-      }
-    }
-
-    .hero-button {
-      grid-column: 2 / 3;
-      @include button($color-yellow, $color-secondary);
-
-
-    }
-
-
+  @include mobile {
+    height: 100vh;
+    top: -3rem;
 
   }
 
+  .slider-component {
+    height: 100%;
+    width: 100%;
+    padding: 0rem;
+
+    @include mobile {
+      // object-fit: contain;
+      height: 100vh;
+
+    }
+
+    .slick-slider,
+    .slick-list,
+    .slick-track,
+    .slider-card {
+      height: 100%;
+
+      @include mobile {
+        // object-fit: contain;
+        height: 100vh;
+
+      }
+    }
+
+    .slider-card {
+      position: relative;
+      padding: 0rem;
+
+
+      overflow: hidden;
+
+      @include mobile {
+        // object-fit: contain;
+        height: 100vh;
+
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        position: relative;
+
+        @include mobile {
+          // object-fit: contain;
+          height: 100vh;
+
+        }
+      }
+
+      .slider-extra-content {
+        position: absolute;
+        bottom: 35%;
+        left: 20%;
+        transform: translateX(-50%);
+        z-index: 10;
+        @include button($color-yellow, $color-secondary);
+
+        @include mobile {
+          bottom: 40%;
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          width: 70%;
+        }
+      }
+
+    }
+  }
+
+  // .hero-overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 2;
+  //   width: 100%;
+  //   height: 100%;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   flex-direction: column;
+  //   color: white;
+  // }
+
+
+  // .hero-text {
+  //   color: $color-white;
+  //   text-align: center;
+  //   margin-bottom: $spacing-lg;
+  //   max-width: 70%; // ancho máximo para que no se estire demasiado
+  //   margin: 0 auto; // centrar el texto horizontalmente
+  //   grid-column: 2 / 3; // ocupar la segunda columna
+
+  //   @include mobile {
+  //     width: 80%;
+  //   }
+
+  //   h1 {
+  //     font-size: $font-size-xl;
+  //     margin-bottom: $spacing-md;
+  //   }
+
+  //   p {
+  //     font-size: $font-size-lg;
+  //     margin-bottom: $spacing-lg;
+  //   }
+  // }
+
+  // .hero-button {
+  //   grid-column: 2 / 3;
+  //   z-index: 9;
+  //   @include button($color-yellow, $color-secondary);
+
+
+  // }
+
+
+
+  // }
 }
 
 .section-numbers {
 
   // @include responsive-height(80vh);
+  margin-bottom: 4rem;
+  // margin-top: -5rem;
+
 
 
   &__content {
@@ -84,6 +159,7 @@
     justify-content: center;
     text-align: center;
     padding: $spacing-md;
+    padding-top: 0;
     color: $color-white;
 
 
@@ -175,6 +251,10 @@
     @include responsive-grid($columns: 2);
     @include responsive-padding();
 
+    @include mobile {
+      padding: $spacing-sm $spacing-lg ;
+    }
+
     .text-container {
       display: flex;
       flex-direction: column;
@@ -182,6 +262,10 @@
       padding-inline: $spacing-lg;
       color: $color-black;
       gap: $spacing-lg;
+
+      @include mobile {
+        padding-inline: 0rem;
+      }
 
       h2 {
         width: 50%;
@@ -267,8 +351,8 @@
     @include responsive-padding();
 
     @include mobile {
-      margin: $spacing-md;
-      padding: $spacing-lg;
+      margin: $spacing-xl;
+      padding: $spacing-md;
     }
 
     .image-container {

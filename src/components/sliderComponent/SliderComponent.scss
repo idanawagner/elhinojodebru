@@ -1,10 +1,25 @@
 @use '@/styles/variables' as *;
 @use '@/styles/fonts' as *;
+@use '@/styles/mixins' as *;
 
 
 .slider-component {
     width: 100%;
     padding: 2rem;
+
+    .slick-next,
+    .slick-prev {
+        @include mobile {
+            display: none !important;
+        }
+
+
+    }
+
+    .slick-dots {
+        display: none !important;
+
+    }
 
     .slider-card {
         background: transparent;

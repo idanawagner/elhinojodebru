@@ -5,11 +5,14 @@ import React from 'react';
 import Slider from 'react-slick';
 import type { Settings } from 'react-slick';
 import './SliderComponent.scss';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 type CardItem = {
     image: string;
+    imageMobile?: string;
     title?: string;
     description?: string;
+    renderContent?: React.ReactNode;
 };
 
 type Props = {
@@ -18,6 +21,7 @@ type Props = {
 };
 
 const SliderComponent: React.FC<Props> = ({ items, settings }) => {
+    const isMobile = useIsMobile();
     const defaultSettings = {
         dots: true,
         infinite: true,
@@ -44,9 +48,21 @@ const SliderComponent: React.FC<Props> = ({ items, settings }) => {
             <Slider {...defaultSettings}>
                 {items.map((item, index) => (
                     <div key={index} className="slider-card">
-                        <img src={item.image} alt={item.title} />
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
+                        <img
+                            src={
+                                isMobile && item.imageMobile
+                                    ? item.imageMobile
+                                    : item.image
+                            }
+                            alt={item.title || ''}
+                        />
+                        {item.title && <h3>{item.title}</h3>}
+                        {item.description && <p>{item.description}</p>}
+                        {item.renderContent && (
+                            <div className="slider-extra-content">
+                                {item.renderContent}
+                            </div>
+                        )}
                     </div>
                 ))}
             </Slider>

@@ -6,6 +6,8 @@ import SectionTestimonials from './Sections/SectionTestimonials';
 import Hero from './Sections/Hero';
 import SliderComponent from '@/components/sliderComponent/SliderComponent';
 import { torosPadres } from '@/data/gallery/torosPadres-data';
+// import { homeSlider } from '@/data/homeSlider';
+
 const Home = () => {
     return (
         <>
@@ -15,6 +17,9 @@ const Home = () => {
                 style={{ backgroundImage: `url(${heroBg})` }}
             /> */}
             <Hero />
+            {/* <div>
+                <SliderComponent items={homeSlider} />
+            </div> */}
             <SectionNumbers />
             <div className="section-slider">
                 <SliderComponent items={torosPadres} />

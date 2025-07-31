@@ -1,6 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import './styles/main.scss';
-import './App.scss';
 import About from './pages/about/About';
 import Home from './pages/home/Home';
 import History from './pages/history/History';
@@ -15,6 +13,8 @@ import Catalog from './pages/auction/catalog/Catalog';
 import Press from './pages/institutional/press/Press';
 import FullArticle from './components/fullArticle/FullArticle';
 import Contact from './pages/contact/Contact';
+import './styles/main.scss';
+import CatalogComingSoon from './pages/auction/ComingSoonCatalog';
 
 function App() {
     return (
@@ -34,6 +34,10 @@ function App() {
                     path="/institutional/press/article/:id"
                     element={<FullArticle />}
                 />
+                {/* <Route
+                    path="/auction/catalog"
+                    element={<CatalogComingSoon />}
+                /> */}
                 <Route path="/auction/catalog" element={<Catalog />} />
                 <Route path="/auction/genealogy" element={<Genealogy />} />
                 <Route path="/contact" element={<Contact />} />

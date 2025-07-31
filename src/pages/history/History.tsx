@@ -8,7 +8,7 @@ const History = () => {
     return (
         <section className="history">
             <div className="history-start">
-                <h1>LA HISTORIA NOS AVALA</h1>
+                <h2>LA HISTORIA NOS AVALA</h2>
                 <h3>HISTORIA DE UNA RAZA</h3>
                 <p>
                     Sólo una convicción muy firme hizo posible que las

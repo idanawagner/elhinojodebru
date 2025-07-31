@@ -21,7 +21,7 @@ html {
     animation: scroll 10s ease-in-out 10s;
 
     @include mobile {
-        font-size: 50%;
+        font-size: 70%;
     }
 
     @include tablet {

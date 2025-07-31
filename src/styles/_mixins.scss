@@ -58,7 +58,7 @@
     }
 
     @include desktop {
-        padding: $spacing-xl; // Más padding en pantallas grandes
+        padding: $spacing-lg; // Más padding en pantallas grandes
     }
 }
 
@@ -149,6 +149,7 @@
     text-align: start;
     max-width: 100%;
     margin-bottom: $spacing-lg;
+
 }
 
 @mixin numbers-bg($opacity: 0.1, $color: $color-white, $size: $font-size-6rem) {

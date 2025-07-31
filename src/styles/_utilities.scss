@@ -34,6 +34,10 @@
         justify-self: center;
         width: 50%;
 
+        @include mobile {
+            width: 100%;
+        }
+
         .MuiTabs-indicator {
             background-color: $color-yellow; // más específico, pisa sin !important
         }

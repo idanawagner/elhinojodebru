@@ -3,6 +3,7 @@ import { Box, Tabs, Tab } from '@mui/material';
 import BullTable from './BullTable';
 import HeiferTable from './HeiferTable';
 
+import './Catalog.scss';
 function TabPanel({
     children,
     value,
@@ -27,7 +28,7 @@ export default function Catalog() {
     };
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box className="catalog">
             <Tabs
                 value={tabIndex}
                 onChange={handleChange}
