@@ -115,7 +115,7 @@
 
 // Mixin para botón básico
 @mixin button($bg: $color-primary, $color: $color-black) {
-    background-color: $bg;
+    background-color: $bg ;
     color: $color;
     border: none;
     padding: $spacing-md $spacing-xl;

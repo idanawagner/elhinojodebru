@@ -1,6 +1,14 @@
-import ELABRALADYPRINCE2166 from '@/assets/images/madres/ELABRALADYPRINCE2166.png';
-import ELABRAQUEENIDA2404 from '@/assets/images/madres/ELABRAQUEENIDA2404.png';
-import SINIDENTIFICACION from '@/assets/images/madres/SINIDENTIFICACION.png';
+import ELABRALADYPRINCE2166 from '@/assets/images/madres/ELABRALADYPRINCE2166.jpg';
+import ELABRAQUEENIDA2404 from '@/assets/images/madres/ELABRAQUEENIDA2404.jpg';
+import madres1 from '@/assets/images/madres/madres1.png';
+import madres2 from '@/assets/images/madres/madres2.jpg';
+import madres3 from '@/assets/images/madres/madres3.jpg';
+import madres4 from '@/assets/images/madres/madres4.jpg';
+import madres5 from '@/assets/images/madres/madres5.jpg';
+import madres6 from '@/assets/images/madres/madres6.jpg';
+import madres7 from '@/assets/images/madres/madres7.jpg';
+import madres8 from '@/assets/images/madres/madres8.jpg';
+import madres9 from '@/assets/images/madres/madres9.jpg';
 
 export const madres = [
     {
@@ -17,7 +25,55 @@ export const madres = [
     },
     {
         id: 3,
-        image: SINIDENTIFICACION,
+        image: madres1,
+        title: '',
+        description: '',
+    },
+    {
+        id: 4,
+        image: madres2,
+        title: '',
+        description: '',
+    },
+    {
+        id: 5,
+        image: madres3,
+        title: '',
+        description: '',
+    },
+    {
+        id: 6,
+        image: madres4,
+        title: '',
+        description: '',
+    },
+    {
+        id: 7,
+        image: madres5,
+        title: '',
+        description: '',
+    },
+    {
+        id: 8,
+        image: madres6,
+        title: '',
+        description: '',
+    },
+    {
+        id: 9,
+        image: madres7,
+        title: '',
+        description: '',
+    },
+    {
+        id: 10,
+        image: madres8,
+        title: '',
+        description: '',
+    },
+    {
+        id: 11,
+        image: madres9,
         title: '',
         description: '',
     },

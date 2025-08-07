@@ -1,6 +1,9 @@
 import eric from '@/assets/images/toros-padres/NEWHOUSE-JEWDOR-ERIC.png';
 import kingJazmin from '@/assets/images/toros-padres/CURAMALAN-KING-JAZMIN.png';
-import countVesuvius from '@/assets/images/toros-padres/CURAMALAN-COUNT-VESUVIS.png';
+import countVesuvius from '@/assets/images/toros-padres/CURAMALAN-COUNT-VESUVIUS.png';
+import errante from '@/assets/images/toros-padres/CURAMALAN-KING-ERRANTE.jpg';
+import evesnor from '@/assets/images/toros-padres/EVESNOR-OF-BYWELL.jpg';
+import evesna from '@/assets/images/toros-padres/EVESNA-OF-BYWEL.jpg';
 
 export const torosPadres = [
     {
@@ -26,23 +29,23 @@ export const torosPadres = [
     },
     {
         id: 4,
-        image: eric,
-        title: 'NEWHOUSE JEWDOR ERIC',
+        image: errante,
+        title: 'CURAMALAN KING ERRANTE',
         description:
-            'Por Jewvil Eric of Manorhill y Jeweleva Erica por Ervil of Harviestoun, campeón de la Royal Highland de 1963.',
+            'Nació el 25 de diciembre de 1975. Adquirido particularmente en la cabaña Curamalan.',
     },
     {
         id: 5,
-        image: kingJazmin,
-        title: 'CURAMALAN KING JAZMIN',
+        image: evesnor,
+        title: 'EVESNOR OF BYWELL',
         description:
-            'Nació el 27 de noviembre de 1975. Adquirido particularmente en la cabaña Curamalan.',
+            'De excepcional producción, padre de campeones y otros premios cuyas hijas fueron reservadas en su totalidad como también sus mejores hijos.',
     },
     {
         id: 6,
-        image: countVesuvius,
-        title: 'CURAMALAN COUNT VESUVIUS',
+        image: evesna,
+        title: 'EVESNA OF BYWEL',
         description:
-            'Adquirido en 750.000 pesos precio máximo del remate anual de Curamalan. Nació el 5 de enero de 1977.',
+            'Por Europul 2nd of Dounside y Evesla of Bywell por extremor of Dounside, gran campeona en la Royal Highland Show y reservada de gran campeona en la R.A.S.E. Show, gran campeona en la Great Yorkshire Show, gran campeona en Northcumberland y Cumberland Country Shows en 1960.',
     },
 ];

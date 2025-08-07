@@ -8,13 +8,11 @@
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  // display: grid;
-  // grid-template-rows: 1fr auto;
   position: relative;
   z-index: 0;
   @include responsive-height(100vh);
   height: 100vh;
-  top: -3rem;
+  // top: -3rem;
 
   @include mobile {
     height: 100vh;
@@ -28,7 +26,6 @@
     padding: 0rem;
 
     @include mobile {
-      // object-fit: contain;
       height: 100vh;
 
     }
@@ -76,10 +73,9 @@
       .slider-extra-content {
         position: absolute;
         bottom: 35%;
-        left: 20%;
+        left: 18%;
         transform: translateX(-50%);
         z-index: 10;
-        @include button($color-yellow, $color-secondary);
 
         @include mobile {
           bottom: 40%;
@@ -87,6 +83,12 @@
           transform: translateX(-50%);
           text-align: center;
           width: 70%;
+        }
+
+        a {
+          @include button($color-yellow, $color-secondary);
+          text-decoration: none;
+
         }
       }
 
@@ -145,11 +147,7 @@
 }
 
 .section-numbers {
-
-  // @include responsive-height(80vh);
   margin-bottom: 4rem;
-  // margin-top: -5rem;
-
 
 
   &__content {
@@ -160,36 +158,37 @@
     text-align: center;
     padding: $spacing-md;
     padding-top: 0;
-    color: $color-white;
-
-
+    margin: 5rem $spacing-xl;
 
     .section-numbers__stats {
       margin-top: 3rem;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: $spacing-md;
       justify-content: space-around;
-      gap: 1rem;
-      width: 80%;
+      gap: 4rem;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 3rem
+      }
 
       .number-item {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        // font-size: $font-size-lg;
-        text-shadow: 2px 2px 4px rgba($color-black, 0.5);
+        align-items: flex-start;
+        color: $color-white;
 
         .number {
           font-weight: bold;
-          font-size: $font-size-xxl;
-          color: $color-white;
+          font-size: $font-size-xl;
+          font-family: $font-title-extraBold;
         }
 
         .label {
           font-size: $font-size-lg;
-          color: $color-white;
+          display: flex;
+          flex-wrap: wrap;
         }
       }
     }
@@ -204,13 +203,18 @@
     text-align: center;
     margin-top: $spacing-lg;
     font-size: $font-size-lg;
-    color: $color-white;
+    color: $color-primary;
     gap: $spacing-md;
+    background-color: $color-bg-secondary;
+    padding: $spacing-md;
 
     p {
       margin: 0;
-      // line-height: 1.8;
       font-weight: bold;
+    }
+
+    .date {
+      display: flex;
     }
   }
 }

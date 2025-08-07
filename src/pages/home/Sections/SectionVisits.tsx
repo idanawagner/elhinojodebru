@@ -25,7 +25,7 @@ const SectionVisits = () => {
                         el mundo.
                     </p>
                     <p className="button-container">
-                        <Link className="button" to="/visits">
+                        <Link className="button" to="/institutional/visits">
                             Ver más
                         </Link>
                     </p>

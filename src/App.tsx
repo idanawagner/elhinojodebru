@@ -15,8 +15,12 @@ import FullArticle from './components/fullArticle/FullArticle';
 import Contact from './pages/contact/Contact';
 import './styles/main.scss';
 import CatalogComingSoon from './pages/auction/ComingSoonCatalog';
+// import { useEffect } from 'react';
 
 function App() {
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
     return (
         <div className="app">
             <Navbar />
@@ -34,11 +38,11 @@ function App() {
                     path="/institutional/press/article/:id"
                     element={<FullArticle />}
                 />
-                {/* <Route
+                <Route
                     path="/auction/catalog"
                     element={<CatalogComingSoon />}
-                /> */}
-                <Route path="/auction/catalog" element={<Catalog />} />
+                />
+                <Route path="/auction/catalog2" element={<Catalog />} />
                 <Route path="/auction/genealogy" element={<Genealogy />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>

@@ -17,7 +17,7 @@ const CatalogComingSoon = () => {
         >
             <ConstructionIcon sx={{ fontSize: 60, color: '#034a16' }} />
             <Typography variant="h5" mt={2} sx={{ color: '#034a16' }}>
-                ¡Catálogo en preparación!
+                ¡Catálogo en desarrollo!
             </Typography>
             <Typography variant="body1" mt={1} color="text.secondary">
                 Estamos trabajando en el catálogo del Remate 2025. Pronto estará

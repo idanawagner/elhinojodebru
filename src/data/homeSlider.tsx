@@ -12,8 +12,8 @@ export const homeSlider = [
         imageMobile: oneMobile,
 
         renderContent: (
-            <Link to="/history" className="hero-button">
-                Conocé nuestra historia
+            <Link to="/auction/genealogy" className="hero-button">
+                Genealogía de la raza
             </Link>
         ),
     },
@@ -22,8 +22,8 @@ export const homeSlider = [
         image: two,
         imageMobile: twoMobile,
         renderContent: (
-            <Link to="/remate-2025" className="hero-button">
-                Ver catálogo Remate 2025
+            <Link to="/history" className="hero-button">
+                Conocé nuestra historia
             </Link>
         ),
     },
@@ -33,7 +33,7 @@ export const homeSlider = [
         imageMobile: threeMobile,
 
         renderContent: (
-            <Link to="/remate-2025" className="hero-button">
+            <Link to="/auction/catalog" className="hero-button">
                 Ver catálogo Remate 2025
             </Link>
         ),

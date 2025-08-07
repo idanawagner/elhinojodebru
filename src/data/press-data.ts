@@ -1,10 +1,56 @@
 import img1 from '@/assets/images/press/article-1.png';
 import img2 from '@/assets/images/press/luisjaime.png';
 import img3 from '@/assets/images/press/article-3.png';
+import PabloGrahmann from '@/assets/images/press/Pablo-Grahmann.jpg';
 
 export const articles = [
     {
         id: 1,
+
+        title: 'Genética única que pocos conocen',
+        text: `Con una oferta consistente de toros Angus para vaquillonas de 15 meses, una joven cabaña de la Cuenca del Salado apunta a posicionarse en su zona. Calidad de punta a menores precios y financiamiento conveniente, son sus estrategias. El próximo remate, una oportunidad para criadores exigentes.
+
+        “Empezamos con los remates hace seis años. Nos especializamos en toros para vaquillonas de 15 meses, un producto que no se ve en el mercado con la cantidad y constancia que ofrecemos. También nos distinguimos por nuestra calidad de excelencia, a un precio 20 a 30% inferior al de las cabañas más afamadas, con décadas de trayectoria”, contó a Valor Carne, Julio Born, titular de Cabaña La Rosa, de Olavarría, Buenos Aires, perteneciente a la firma agrícola ganadera San José del Oeste.
+
+La cabaña, de largar trayectoria, retomó sus actividades hace 14 años, esta vez con la raza Aberdeen Angus, con el objetivo de mejorar el rodeo de la propia empresa. La base de su genética es la del “El Hinojo” de la familia Bru, que se caracteriza por la pureza racial. A partir de ahí, de la mano del genetista Francisco Ortiz han dado origen a un biotipo muy carnicero, con facilidad de parto, adaptado a los campos de la Cuenca del Salado.
+
+Años después, viendo las necesidades de los ganaderos de la zona, salieron a ofrecer sus productos al mercado. “Somos cabañeros de toda la vida, la diferencia es que ahora nos enfocamos al criador comercial; le brindamos la misma genética que utilizamos en nuestros campos, que no son precisamente espectaculares. Manejamos 13.000 ha en Olavarría, que parecen una gran maceta de 50 cm de profundidad con una placa de tosca debajo”, señaló Born. Y detalló: “a veces, hay exceso de pasto y otras aprieta el invierno y tenemos que aguantar con lo que hay. Por eso, apuntamos a un animal suficientemente maleable como para ajustarse a esos vaivenes forrajeros y climáticos, y que aún así pueda expresar todo su potencial”.
+
+Con respecto al biotipo, precisó que “el frame es moderado, en vez de irse hacia arriba, es alargado, por lo que no necesita consumir mucho para mantener su estructura. A su vez, le entra mucha carne, es muy lomudo. Si uno quiere seguir metiéndole kilos puede hacerlo con el manejo. Así, estará gordo con 350 kg a 480 kg, la versatilidad que necesitan los campos bonaerenses”.
+
+Los productos
+
+Si bien la cabaña ofrece casi todas las categorías que produce la estancia, como toros para vacas, vaquillonas paridas, terneros y vacas con cría al pie, el producto estrella es el toro para vaquillonas de 15 meses. Este tipo de reproductor brinda un bajo peso al nacer y ganancias diarias que compensan ese déficit en los primeros 14 meses de vida del ternero, atributos claves para los planteos que buscan eficiencia.
+
+“La ganadería está un poco mejor pero la realidad es que los márgenes siempre han sido bastante escuetos. Si la vaquillona se preña joven, con la misma estructura y un manejo finito de la alimentación y la sanidad, empieza a  producir antes; y con ello potencia los resultados de la empresa”, planteó Born.
+
+Sin embargo, advirtió que “si bien la tecnología de 15 meses existe hace muchos años, el problema es la falta de consistencia del toro que se vende para esa categoría. Por ahí, el que lo compra, termina obteniendo un ternero de 35/37 kilos. Entonces, se quema con leche y se desalienta. Hoy en día, nadie puede tener tanto personal como para ayudar a parir una centena de vaquillonas”.
+
+En el caso de La Rosa, el empresario resaltó que “con el origen Bru, que nos da un tamaño chico, al que le hemos incorporado genética con facilidad de parto, tenemos gran seguridad de los que ofrecemos”. Además, los DEPs incluyen datos probados de peso al nacer para que los criadores sepan que lo que están comprando es realmente para 15 meses. “Buscamos solucionarles problemas. Incluso, durante el remate nuestros profesionales los asesoran, mostrando cuáles son esos toros, porqué están indicados para ese fin y cómo se manejan”, explicó.
+
+Según Pablo Grahmann, Gerente Comercial de la firma, este tipo de producto tiene cada vez mayor demanda. “Los clientes valoran nuestra seriedad. Una vez que los prueban vuelven porque saben que funcionan. De hecho, el año pasado nos quedamos sin oferta  antes de finalizar el remate. Además, los primeros bretes para 15 meses se venden al mismo precio que el toro de punta para vacas, o sea que vienen a buscarlo y lo pagan. Reconocen la calidad”, aseveró.
+
+Calidad & Precio
+
+Un aspecto interesante de la estrategia de cabaña La Rosa es su plan de marketing. “Nos preguntábamos cómo hacer en un mercado donde hay hasta dos remates por día para que los productores vengan, sin conocer nuestra genética, y pensamos en el bolsillo. Entonces, si bien tenemos una calidad fantástica y un desarrollo del toro de 15 meses que no es común, nuestros precios son accesibles, están en el promedio de los reproductores para rodeos comerciales”, argumentó Grahmann.
+
+Otra fortaleza es la financiación, que va de la mano con la escala de San José del Oeste. “Trabajamos 17 mil ha, entre propias y alquiladas, en agricultura, ganadería y feedlot. Por nuestro volumen de negocios, conseguimos condiciones que quizás otras cabañas no logran y eso se lo trasladamos al cliente”, sostuvo. En ese sentido, en el remate del próximo 14 de septiembre habrá 10 cuotas sin interés para la compra de toros y flete gratis hasta 200 km. “Es una facilidad que, hoy por hoy, es muy difícil de ver. Además, se podrá operar con las tarjetas agropecuarias más importantes”, subrayó Grahmann.
+
+En síntesis, prosiguió, “lo nuestro es como encontrar la perlita desconocida, con una relación calidad- precio y un financiamiento únicos, porque todavía no tenemos gran difusión en el mercado. Es una oportunidad para aprovechar”.
+
+Para finalizar, Born destacó: “somos una cabaña joven, con experiencia familiar y seriedad, nos gusta la innovación y queremos avanzar a paso firme, brindando siempre la calidad que utilizamos en nuestro propio rodeo para maximizar la eficiencia y los márgenes. Pensamos seguir creciendo”.
+
+Por Liliana Rosenstein, Editora de Valor Carne 
+`,
+        date: 'Agosto 2016',
+        image: {
+            src: PabloGrahmann,
+            alt: 'Pablo-Grahmann',
+        },
+        link: 'https://www.valorcarne.com.ar/genetica-unica-que-pocos-conocen/',
+    },
+    {
+        id: 2,
         title: 'Derribando mitos! El nuevo siglo nos encontró...',
         text: `Derribando mitos! El nuevo siglo nos encontró con la cabaña en plena expansión. Ya estábamos con el proyecto maduro; aquella hacienda moderada y fértil, respondía con fluidez a los programas de cría controlada con toma de datos, en campos alquilados, siempre un problema a resolver, sobre todo cuando vencían los contratos y había que salir con las vacas para otro lado.
 Comenzamos por aquellos tiempos con Breed Plan, ya que al no tener hacienda registrada, las mediciones genéticas no las podíamos correr por ERA.
@@ -36,7 +82,7 @@ La foto que acompaña es de "Bombon Escoces" en colecta en Nogales de Di Tella, 
         link: 'https://linkanota.com',
     },
     {
-        id: 2,
+        id: 3,
         title: 'Recuerdos del futuro',
         text: `Sólo una convicción muy firme hizo posible que las características de la raza Aberdeen Angus, se mantuvieran inalterables hasta hoy en esta cabaña de la Argentina. Cuando ya en Escocia la raza tiene dificultades para identificarse con sus tribus originarias, la Cabaña El Hinojo de Coronel Suárez a través de sus dueños el Sr. Luis Jaime Bru, puede relatar su trayectoria con el mismo tipo de hacienda a través del tiempo. La historia de la raza en la Argentina nos muestra cómo un mismo tipo de animal pudo ser “grande” en los ’50 y “chico” en los ’80.
 
@@ -76,7 +122,7 @@ El asesor Veterinario de un rodeo Angus de la Pampa, sobre el que se han usado n
 
 Nota realizada por la revista Informe Ganadero, 10 de septiembre de 1999. Pag. 8
 `,
-        date: 'Agosto 2025',
+        date: '',
         image: {
             src: img2,
             alt: 'Descripción de la imagen de la nota 2',
@@ -84,14 +130,14 @@ Nota realizada por la revista Informe Ganadero, 10 de septiembre de 1999. Pag. 8
         link: 'https://linkanota2.com',
     },
     {
-        id: 3,
+        id: 4,
         title: '¿Por qué estos toros?',
         text: `Porque como profesionales, hemos visto a lo largo de años, como la inseminación fue un instrumento con efectos a veces más negativos que positivos, con la introducción de toros enormes, que daban problemas de partos, eran padres de vacas que no se preñaban, novillos interminables, y otros múltiples problemas.
 Porque estamos convencidos que para generar cambios positivos en un rodeo, debemos trabajar con toros de genéticas sólida y homogénea, y no con aquellos que son solo el producto de dos padres de buena estructura física, o ganadores en una exposición.
 Porque aunque el negocio del show ganadero todavía pasa por otro lado, los que trabajamos todos los días con los rodeos sabemos muy bien que es cierto que la fertilidad es 10 veces más importante que la “facha” de un animal, y que la adaptación al medio ambiente es la única posibilidad que tiene un toro o vaca de poder transmitir lo que lleva adentro.
 Porque a nuestro juicio, producimos reproductores de tamaño ideal, si hablamos de vacas de cría en campos difíciles y novillos engordando a pasto, que estén gordos lo más rápido posible, con costos compatibles con una razonable rentabilidad.
 Porque todos los modelos de producción exitosos se asientan sobre “hacienda normal”, plástica y versátil, que se adapta naturalmente al campo donde está y no debe recibir “ayudas” de afuera que siempre son caras.`,
-        date: 'Agosto 2025',
+        date: '',
         image: {
             src: img3,
             alt: 'Descripción de la imagen de la nota 2',

@@ -6,20 +6,13 @@ import SectionTestimonials from './Sections/SectionTestimonials';
 import Hero from './Sections/Hero';
 import SliderComponent from '@/components/sliderComponent/SliderComponent';
 import { torosPadres } from '@/data/gallery/torosPadres-data';
+import FixedButton from './fixedButton/FixedButton';
 // import { homeSlider } from '@/data/homeSlider';
 
 const Home = () => {
     return (
         <>
-            {/* <div className=""> */}
-            {/* <div
-                className="home-bg"
-                style={{ backgroundImage: `url(${heroBg})` }}
-            /> */}
             <Hero />
-            {/* <div>
-                <SliderComponent items={homeSlider} />
-            </div> */}
             <SectionNumbers />
             <div className="section-slider">
                 <SliderComponent items={torosPadres} />
@@ -27,6 +20,7 @@ const Home = () => {
             <SectionPressArticle />
             <SectionVisits />
             <SectionTestimonials />
+            <FixedButton />
         </>
     );
 };

@@ -20,9 +20,6 @@ const TabsGallery = () => {
 
     return (
         <Box sx={{ width: '100%', padding: '2rem 1rem' }}>
-            {/* <Typography variant="h4" align="center" gutterBottom>
-                Galería de Fotos
-            </Typography> */}
             <Tabs
                 value={selectedTab}
                 onChange={handleChange}
