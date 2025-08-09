@@ -30,23 +30,23 @@ header {
     gap: 2rem; // espacio entre subitems
     height: 10% !important; // altura fija para el menú
 
-    .MuiPaper-root {
-        top: 25% !important; // Asegura que el menú se alinee al borde superior
-    }
+    // .MuiPaper-root {
+    //     top: 25% !important; // Asegura que el menú se alinee al borde superior
+    // }
 
-    .MuiMenuItem-root {
-        white-space: nowrap;
-        padding-inline: 2rem;
-    }
+    // .MuiMenuItem-root {
+    //     white-space: nowrap;
+    //     padding-inline: 2rem;
+    // }
 }
 
 .nav-link {
     text-decoration: none;
-    color: $color-white;
+    color: $color-white !important;
     cursor: pointer;
     font-weight: bold;
 
     &:hover {
-        color: $color-secondary;
+        color: $color-yellow !important;
     }
 }

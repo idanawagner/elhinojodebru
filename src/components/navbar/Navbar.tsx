@@ -4,13 +4,13 @@ import {
     Box,
     Toolbar,
     IconButton,
-    Menu,
-    MenuItem,
     Drawer,
     List,
     ListItem,
+    ListItemButton,
     ListItemText,
     Collapse,
+    Button,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -19,7 +19,14 @@ import { Link } from 'react-router-dom';
 import logoHeader from '@/assets/logo.png';
 
 import './Navbar.scss';
-const navLinks = [
+
+type NavLink = {
+    label: string;
+    path?: string;
+    submenu?: { label: string; path: string }[];
+};
+
+const navLinks: NavLink[] = [
     { label: 'QUIENES SOMOS', path: '/about' },
     { label: 'HISTORIA', path: '/history' },
     {
@@ -44,94 +51,74 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const [openMenu, setOpenMenu] = useState<string | null>(null);
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [openDrawerSubmenus, setOpenDrawerSubmenus] = useState<{
-        [key: string]: boolean;
-    }>({});
+    const [openDrawerSubmenus, setOpenDrawerSubmenus] = useState<
+        Record<string, boolean>
+    >({});
 
-    const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
-    };
-
-    const handleMenuOpen = (
-        event: React.MouseEvent<HTMLElement>,
-        label: string
-    ) => {
-        setAnchorEl(event.currentTarget);
-        setOpenMenu(label);
-    };
-
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-        setOpenMenu(null);
-    };
+    const handleDrawerToggle = () => setMobileOpen((prev) => !prev);
 
     const toggleDrawerSubmenu = (label: string) => {
-        setOpenDrawerSubmenus((prev) => ({
-            ...prev,
-            [label]: !prev[label],
-        }));
+        setOpenDrawerSubmenus((prev) => ({ ...prev, [label]: !prev[label] }));
     };
 
     const drawer = (
-        // Mobile
         <Box sx={{ textAlign: 'center' }}>
             <List>
                 {navLinks.map((item) =>
                     item.submenu ? (
                         <Box key={item.label}>
-                            <ListItem
-                                component="div"
-                                onClick={() => toggleDrawerSubmenu(item.label)}
-                            >
-                                <ListItemText primary={item.label} />
-                                {openDrawerSubmenus[item.label] ? (
-                                    <ExpandLess />
-                                ) : (
-                                    <ExpandMore />
-                                )}
+                            <ListItem disablePadding>
+                                <ListItemButton
+                                    onClick={() =>
+                                        toggleDrawerSubmenu(item.label)
+                                    }
+                                >
+                                    <ListItemText primary={item.label} />
+                                    {openDrawerSubmenus[item.label] ? (
+                                        <ExpandLess />
+                                    ) : (
+                                        <ExpandMore />
+                                    )}
+                                </ListItemButton>
                             </ListItem>
+
                             <Collapse
                                 in={openDrawerSubmenus[item.label]}
                                 timeout="auto"
                                 unmountOnExit
                             >
                                 <List component="div" disablePadding>
-                                    {item.submenu.map((subitem) => (
+                                    {item.submenu.map((sub) => (
                                         <ListItem
-                                            key={subitem.label}
+                                            key={sub.label}
+                                            disablePadding
                                             sx={{ pl: 4 }}
                                         >
-                                            <Link
-                                                to={subitem.path}
+                                            <ListItemButton
+                                                component={Link}
+                                                to={sub.path}
                                                 onClick={handleDrawerToggle}
-                                                style={{
-                                                    textDecoration: 'none',
-                                                    color: 'inherit',
-                                                }}
                                             >
-                                                {subitem.label}
-                                            </Link>
+                                                <ListItemText
+                                                    primary={sub.label}
+                                                />
+                                            </ListItemButton>
                                         </ListItem>
                                     ))}
                                 </List>
                             </Collapse>
                         </Box>
                     ) : (
-                        <ListItem key={item.label}>
-                            <Link
-                                to={item.path}
+                        <ListItem key={item.label} disablePadding>
+                            <ListItemButton
+                                component={Link}
+                                to={item.path!}
                                 onClick={handleDrawerToggle}
-                                style={{
-                                    textDecoration: 'none',
-                                    color: 'inherit',
-                                    width: '100%',
-                                }}
                             >
                                 <ListItemText primary={item.label} />
-                            </Link>
+                            </ListItemButton>
                         </ListItem>
                     )
                 )}
@@ -141,7 +128,6 @@ export default function Navbar() {
 
     return (
         <>
-            {/* desktop */}
             <AppBar
                 position="static"
                 color="transparent"
@@ -170,97 +156,92 @@ export default function Navbar() {
                             className="logo"
                             width={160}
                             height={48}
-                        ></img>{' '}
+                        />
                     </Link>
+
+                    {/* Desktop menu */}
                     <Box
                         sx={{
                             display: { xs: 'none', md: 'flex' },
-                            gap: 2,
+                            gap: 4,
                             alignItems: 'center',
+                            position: 'relative',
                         }}
                     >
-                        {navLinks.map((item) =>
-                            item.submenu ? (
-                                <Box key={item.label} sx={{ padding: 0 }}>
-                                    <div
-                                        aria-controls="menu-appbar"
-                                        aria-haspopup="true"
-                                        onClick={(e) =>
-                                            handleMenuOpen(e, item.label)
-                                        }
-                                        className="nav-link"
+                        {navLinks.map((item) => (
+                            <Box
+                                key={item.label}
+                                onMouseEnter={() =>
+                                    item.submenu && setOpenMenu(item.label)
+                                }
+                                onMouseLeave={() => setOpenMenu(null)}
+                                sx={{ position: 'relative' }}
+                            >
+                                {item.path ? (
+                                    <Button
+                                        component={Link}
+                                        to={item.path}
+                                        sx={{ color: 'black', fontWeight: 500 }}
                                     >
                                         {item.label}
-                                    </div>
-                                    <Menu
-                                        anchorEl={anchorEl}
-                                        open={openMenu === item.label}
-                                        onClose={handleMenuClose}
-                                        anchorOrigin={{
-                                            vertical: 'bottom',
-                                            horizontal: 'left',
-                                        }}
-                                        transformOrigin={{
-                                            vertical: 'top',
-                                            horizontal: 'left',
-                                        }}
-                                        className="submenu-menu"
-                                        slotProps={{
-                                            list: {
-                                                disablePadding: true,
-                                                sx: {
-                                                    display: 'flex',
-                                                    flexDirection: 'row',
-                                                    justifyContent: 'center',
-                                                    width: '100vw',
-                                                    flexWrap: 'wrap',
-                                                },
-                                            },
-                                            paper: {
-                                                sx: {
-                                                    width: '100vw',
-                                                    maxWidth: '100vw',
-                                                    maxHeight:
-                                                        'calc(100vh - 9rem)',
-                                                    left: 0,
-                                                    backgroundColor:
-                                                        'transparent',
-                                                    boxShadow: 'none',
-                                                    overflowX: 'hidden',
-                                                },
-                                            },
-                                        }}
+                                    </Button>
+                                ) : (
+                                    <Button
+                                        sx={{ color: 'red', fontWeight: 500 }}
                                     >
-                                        {item.submenu.map((subitem) => (
-                                            <Link
-                                                key={subitem.label}
-                                                to={subitem.path}
-                                                style={{
-                                                    textDecoration: 'none',
-                                                    color: 'inherit',
+                                        {item.label}
+                                    </Button>
+                                )}
+
+                                {item.submenu && openMenu === item.label && (
+                                    <Box
+                                        sx={{
+                                            position: 'absolute',
+                                            top: '100%',
+                                            left: 0,
+                                            background: 'white',
+                                            boxShadow: 3,
+                                            zIndex: 10,
+                                            minWidth: 200,
+                                            borderRadius: 1,
+                                            paddingY: 1,
+                                        }}
+                                        onMouseEnter={() =>
+                                            setOpenMenu(item.label)
+                                        }
+                                        onMouseLeave={() => setOpenMenu(null)}
+                                    >
+                                        {item.submenu.map((sub) => (
+                                            <Button
+                                                key={sub.label}
+                                                component={Link}
+                                                to={sub.path}
+                                                sx={{
+                                                    display: 'block',
+                                                    textAlign: 'left',
+                                                    width: '100%',
+                                                    color: 'black',
+                                                    // padding: '8px 16px',
+                                                    justifyContent:
+                                                        'flex-start',
+                                                    fontWeight: 400,
+                                                    '&:hover': {
+                                                        backgroundColor:
+                                                            '#f0f0f0',
+                                                    },
                                                 }}
+                                                // className="submenu-menu"
                                             >
-                                                <MenuItem
-                                                    key={subitem.label}
-                                                    onClick={handleMenuClose}
-                                                >
-                                                    {subitem.label}
-                                                </MenuItem>
-                                            </Link>
+                                                {sub.label}
+                                            </Button>
                                         ))}
-                                    </Menu>
-                                </Box>
-                            ) : (
-                                <Link
-                                    key={item.label}
-                                    to={item.path}
-                                    className="nav-link"
-                                >
-                                    {item.label}
-                                </Link>
-                            )
-                        )}
+                                    </Box>
+                                )}
+                            </Box>
+                        ))}
                     </Box>
+
+                    {/* Mobile menu icon */}
                     <IconButton
                         color="inherit"
                         aria-label="menu"
@@ -273,6 +254,7 @@ export default function Navbar() {
                 </Toolbar>
             </AppBar>
 
+            {/* Mobile drawer */}
             <Drawer
                 anchor="right"
                 open={mobileOpen}
