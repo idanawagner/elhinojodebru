@@ -1,11 +1,10 @@
-@use '@/styles/variables' as *;
-@use '@/styles/mixins' as *;
-@use '@/styles/utilities' as *;
+// @use '@/styles/variables' as *;
+// @use '@/styles/mixins' as *;
+// @use '@/styles/utilities' as *;
 
 header {
-    z-index: 1 !important;
-    position: relative !important;
-
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .navbar {
@@ -15,38 +14,54 @@ header {
     width: 100%;
     z-index: 1;
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba($color-black, 0.1);
-    padding: .5rem 2rem !important;
+    box-shadow: 0 2px 10px rgba($color-black, 0.1) !important;
+    padding: .5rem 0rem !important;
 }
 
-.submenu-menu {
-    top: 80px !important; // Asegura que el menú se alinee al borde superior
-    background-color: white;
-    width: 100vw !important; // ocupa todo el ancho de la ventana
-    left: 0 !important; // alinear al borde izquierdo
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem; // espacio entre subitems
-    height: 10% !important; // altura fija para el menú
+// .submenu-menu {
+//     top: 80px !important; // Asegura que el menú se alinee al borde superior
+//     background-color: white;
+//     width: 100vw !important; // ocupa todo el ancho de la ventana
+//     left: 0 !important; // alinear al borde izquierdo
+//     display: flex !important;
+//     flex-direction: row;
+//     justify-content: center;
+//     gap: 2rem; // espacio entre subitems
+//     height: 10% !important; // altura fija para el menú
 
-    // .MuiPaper-root {
-    //     top: 25% !important; // Asegura que el menú se alinee al borde superior
-    // }
+//     // .MuiPaper-root {
+//     //     top: 25% !important; // Asegura que el menú se alinee al borde superior
+//     // }
 
-    // .MuiMenuItem-root {
-    //     white-space: nowrap;
-    //     padding-inline: 2rem;
-    // }
-}
+//     // .MuiMenuItem-root {
+//     //     white-space: nowrap;
+//     //     padding-inline: 2rem;
+//     // }
+// }
 
 .nav-link {
     text-decoration: none;
     color: $color-white !important;
     cursor: pointer;
-    font-weight: bold;
+    // font-weight: bold;
 
     &:hover {
         color: $color-yellow !important;
+    }
+
+    &:focus {
+        color: $color-yellow !important;
+    }
+
+    &-submenu {
+        color: $color-primary !important;
+        // font-weight: 800;
+        padding: 0.5rem 1rem;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: #034a164e !important;
+            color: $color-primary !important;
+        }
     }
 }

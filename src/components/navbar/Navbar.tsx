@@ -136,6 +136,8 @@ export default function Navbar() {
                 sx={{
                     paddingBlockStart: 2,
                     paddingInline: 9,
+                    marginTop: 3,
+                    position: 'relative',
                 }}
             >
                 <Toolbar
@@ -165,8 +167,9 @@ export default function Navbar() {
                             display: { xs: 'none', md: 'flex' },
                             gap: 4,
                             alignItems: 'center',
-                            position: 'relative',
+                            // position: 'relative',
                         }}
+                        onMouseLeave={() => setOpenMenu(null)}
                     >
                         {navLinks.map((item) => (
                             <Box
@@ -181,65 +184,82 @@ export default function Navbar() {
                                     <Button
                                         component={Link}
                                         to={item.path}
-                                        sx={{ color: 'black', fontWeight: 500 }}
+                                        // sx={{ color: 'black', fontWeight: 500 }}
+                                        className="nav-link "
                                     >
                                         {item.label}
                                     </Button>
                                 ) : (
                                     <Button
-                                        sx={{ color: 'red', fontWeight: 500 }}
+                                        // sx={{ color: 'red', fontWeight: 500 }}
+                                        className="nav-link "
                                     >
                                         {item.label}
                                     </Button>
                                 )}
-
-                                {item.submenu && openMenu === item.label && (
-                                    <Box
-                                        sx={{
-                                            position: 'absolute',
-                                            top: '100%',
-                                            left: 0,
-                                            background: 'white',
-                                            boxShadow: 3,
-                                            zIndex: 10,
-                                            minWidth: 200,
-                                            borderRadius: 1,
-                                            paddingY: 1,
-                                        }}
-                                        onMouseEnter={() =>
-                                            setOpenMenu(item.label)
-                                        }
-                                        onMouseLeave={() => setOpenMenu(null)}
-                                    >
-                                        {item.submenu.map((sub) => (
+                            </Box>
+                        ))}
+                        {openMenu && (
+                            <Box
+                                sx={{
+                                    position: 'absolute',
+                                    top: '82%',
+                                    left: 0,
+                                    width: '99vw',
+                                    backgroundColor: 'white',
+                                    boxShadow: 3,
+                                    zIndex: 19990,
+                                    paddingY: 1,
+                                    margin: 0,
+                                    pointerEvents: 'auto',
+                                    overflow: 'hidden',
+                                    height: '4rem',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                }}
+                                onMouseEnter={() => setOpenMenu(openMenu)}
+                                onMouseLeave={() => setOpenMenu(null)}
+                            >
+                                <Box
+                                    sx={{
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        gap: '2rem',
+                                        maxWidth: '1200px',
+                                        marginX: 'auto',
+                                        paddingX: 2,
+                                    }}
+                                >
+                                    {navLinks
+                                        .find((item) => item.label === openMenu)
+                                        ?.submenu?.map((sub) => (
                                             <Button
                                                 key={sub.label}
                                                 component={Link}
                                                 to={sub.path}
-                                                sx={{
-                                                    display: 'block',
-                                                    textAlign: 'left',
-                                                    width: '100%',
-                                                    color: 'black',
-                                                    // padding: '8px 16px',
-                                                    justifyContent:
-                                                        'flex-start',
-                                                    fontWeight: 400,
-                                                    '&:hover': {
-                                                        backgroundColor:
-                                                            '#f0f0f0',
-                                                    },
-                                                }}
-                                                // className="submenu-menu"
+                                                className="nav-link-submenu"
+                                                // sx={{
+                                                //     whiteSpace: 'nowrap',
+                                                //     color: 'black',
+                                                //     fontWeight: 400,
+                                                //     justifyContent:
+                                                //         'flex-start',
+                                                //     padding: '8px 16px',
+                                                //     '&:hover': {
+                                                //         backgroundColor:
+                                                //             '#f0f0f0',
+                                                //     },
+                                                // }}
                                             >
                                                 {sub.label}
                                             </Button>
                                         ))}
-                                    </Box>
-                                )}
+                                </Box>
                             </Box>
-                        ))}
+                        )}
                     </Box>
+                    {/* ))}
+                    </Box> */}
 
                     {/* Mobile menu icon */}
                     <IconButton
