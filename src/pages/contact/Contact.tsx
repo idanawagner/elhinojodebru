@@ -230,7 +230,7 @@ const Contact = () => {
             <div className="map-container">
                 <iframe
                     title="Ubicación Cabaña El Hinojo de Bru"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.7782241738534!2d-61.96914908480077!3d-37.514853679802264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95eb762b80c9cb6f%3A0xf3a7b7709c6f0e6f!2sEl%20Hinojo%20de%20Bru!5e0!3m2!1ses-419!2sar!4v1654901586952!5m2!1ses-419!2sar"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3172.25025457074!2d-62.135903!3d-37.72404999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzfCsDQzJzI2LjYiUyA2MsKwMDgnMDkuMyJX!5e1!3m2!1ses!2sar!4v1754922607317!5m2!1ses!2sar"
                     width="100%"
                     height="400"
                     style={{ border: 0 }}

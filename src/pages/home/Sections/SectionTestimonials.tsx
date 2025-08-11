@@ -10,8 +10,8 @@ const testimonialsList = [
         author: '- María López, Criadora',
     },
     {
-        text: '"Visitar El Hinojo de Bru fue una experiencia inolvidable. La dedicación y el amor por la raza Aberdeen Angus se reflejan en cada rincón de la cabaña. Los animales son impresionantes y la historia de la cabaña es fascinante."',
-        author: '- María López, Criadora',
+        text: '"Un programa genético que te puede gustar o no, pero 100% consistente, la sana tozudez de un criador para seguir sus convicciones contra viento y marea, eso era lo que emanaba esa feria aquel día primaveral de 1999.” ⁣',
+        author: '- Andrés Cornejo, Veterinario y Especialista en Reproduccion Bovina.',
     },
 ];
 

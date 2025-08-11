@@ -8,7 +8,7 @@
 
     &-title {
         text-align: center;
-        @include title($color: $color-white);
+        @include title($color: $color-white, $font: $font-title-heavy);
         margin-bottom: $spacing-lg;
     }
 

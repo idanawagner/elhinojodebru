@@ -18,27 +18,6 @@ header {
     padding: .5rem 0rem !important;
 }
 
-// .submenu-menu {
-//     top: 80px !important; // Asegura que el menú se alinee al borde superior
-//     background-color: white;
-//     width: 100vw !important; // ocupa todo el ancho de la ventana
-//     left: 0 !important; // alinear al borde izquierdo
-//     display: flex !important;
-//     flex-direction: row;
-//     justify-content: center;
-//     gap: 2rem; // espacio entre subitems
-//     height: 10% !important; // altura fija para el menú
-
-//     // .MuiPaper-root {
-//     //     top: 25% !important; // Asegura que el menú se alinee al borde superior
-//     // }
-
-//     // .MuiMenuItem-root {
-//     //     white-space: nowrap;
-//     //     padding-inline: 2rem;
-//     // }
-// }
-
 .nav-link {
     text-decoration: none;
     color: $color-white !important;
