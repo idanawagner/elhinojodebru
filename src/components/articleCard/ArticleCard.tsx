@@ -9,6 +9,7 @@ type ArticleCardProps = {
         image: {
             src: string;
             alt: string;
+            imageCaption: string;
         };
         link: string;
     };

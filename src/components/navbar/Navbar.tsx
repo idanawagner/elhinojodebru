@@ -11,6 +11,7 @@ import {
     ListItemText,
     Collapse,
     Button,
+    Fade,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandLess from '@mui/icons-material/ExpandLess';
@@ -64,8 +65,22 @@ export default function Navbar() {
     };
 
     const drawer = (
-        <Box sx={{ textAlign: 'center' }}>
-            <List>
+        <Box
+            sx={{
+                textAlign: 'center',
+                padding: 2,
+                backgroundColor: '#034a16',
+                height: '100vh',
+            }}
+        >
+            <List
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '2rem',
+                    color: '#fff',
+                }}
+            >
                 {navLinks.map((item) =>
                     item.submenu ? (
                         <Box key={item.label}>
@@ -75,7 +90,17 @@ export default function Navbar() {
                                         toggleDrawerSubmenu(item.label)
                                     }
                                 >
-                                    <ListItemText primary={item.label} />
+                                    <ListItemText
+                                        primary={item.label}
+                                        slotProps={{
+                                            primary: {
+                                                sx: {
+                                                    fontSize: '1.2rem',
+                                                    fontWeight: 700,
+                                                },
+                                            },
+                                        }}
+                                    />
                                     {openDrawerSubmenus[item.label] ? (
                                         <ExpandLess />
                                     ) : (
@@ -103,6 +128,15 @@ export default function Navbar() {
                                             >
                                                 <ListItemText
                                                     primary={sub.label}
+                                                    slotProps={{
+                                                        primary: {
+                                                            sx: {
+                                                                fontSize:
+                                                                    '1.2rem',
+                                                                fontWeight: 700,
+                                                            },
+                                                        },
+                                                    }}
                                                 />
                                             </ListItemButton>
                                         </ListItem>
@@ -117,7 +151,17 @@ export default function Navbar() {
                                 to={item.path!}
                                 onClick={handleDrawerToggle}
                             >
-                                <ListItemText primary={item.label} />
+                                <ListItemText
+                                    primary={item.label}
+                                    slotProps={{
+                                        primary: {
+                                            sx: {
+                                                fontSize: '1.2rem',
+                                                fontWeight: 700,
+                                            },
+                                        },
+                                    }}
+                                />
                             </ListItemButton>
                         </ListItem>
                     )
@@ -200,66 +244,57 @@ export default function Navbar() {
                             </Box>
                         ))}
                         {openMenu && (
-                            <Box
-                                sx={{
-                                    position: 'absolute',
-                                    top: '82%',
-                                    left: 0,
-                                    width: '99vw',
-                                    backgroundColor: 'white',
-                                    boxShadow: 3,
-                                    zIndex: 19990,
-                                    paddingY: 1,
-                                    margin: 0,
-                                    pointerEvents: 'auto',
-                                    overflow: 'hidden',
-                                    height: '4rem',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                }}
-                                onMouseEnter={() => setOpenMenu(openMenu)}
-                                onMouseLeave={() => setOpenMenu(null)}
-                            >
+                            <Fade in={Boolean(openMenu)} timeout={400}>
                                 <Box
                                     sx={{
+                                        position: 'absolute',
+                                        top: '82%',
+                                        left: 0,
+                                        width: '99vw',
+                                        backgroundColor: 'white',
+                                        boxShadow: 3,
+                                        zIndex: 19990,
+                                        paddingY: 1,
+                                        margin: 0,
+                                        pointerEvents: 'auto',
+                                        overflow: 'hidden',
+                                        height: '6rem',
                                         display: 'flex',
-                                        justifyContent: 'center',
-                                        gap: '2rem',
-                                        maxWidth: '1200px',
-                                        marginX: 'auto',
-                                        paddingX: 2,
+                                        alignItems: 'center',
                                     }}
+                                    onMouseEnter={() => setOpenMenu(openMenu)}
+                                    onMouseLeave={() => setOpenMenu(null)}
                                 >
-                                    {navLinks
-                                        .find((item) => item.label === openMenu)
-                                        ?.submenu?.map((sub) => (
-                                            <Button
-                                                key={sub.label}
-                                                component={Link}
-                                                to={sub.path}
-                                                className="nav-link-submenu"
-                                                // sx={{
-                                                //     whiteSpace: 'nowrap',
-                                                //     color: 'black',
-                                                //     fontWeight: 400,
-                                                //     justifyContent:
-                                                //         'flex-start',
-                                                //     padding: '8px 16px',
-                                                //     '&:hover': {
-                                                //         backgroundColor:
-                                                //             '#f0f0f0',
-                                                //     },
-                                                // }}
-                                            >
-                                                {sub.label}
-                                            </Button>
-                                        ))}
+                                    <Box
+                                        sx={{
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            gap: '2rem',
+                                            maxWidth: '1200px',
+                                            marginX: 'auto',
+                                            paddingX: 2,
+                                        }}
+                                    >
+                                        {navLinks
+                                            .find(
+                                                (item) =>
+                                                    item.label === openMenu
+                                            )
+                                            ?.submenu?.map((sub) => (
+                                                <Button
+                                                    key={sub.label}
+                                                    component={Link}
+                                                    to={sub.path}
+                                                    className="nav-link-submenu"
+                                                >
+                                                    {sub.label}
+                                                </Button>
+                                            ))}
+                                    </Box>
                                 </Box>
-                            </Box>
+                            </Fade>
                         )}
                     </Box>
-                    {/* ))}
-                    </Box> */}
 
                     {/* Mobile menu icon */}
                     <IconButton
@@ -267,9 +302,9 @@ export default function Navbar() {
                         aria-label="menu"
                         edge="end"
                         onClick={handleDrawerToggle}
-                        sx={{ display: { md: 'none' } }}
+                        sx={{ display: { md: 'none' }, marginRight: '2rem' }}
                     >
-                        <MenuIcon />
+                        <MenuIcon sx={{ width: '2rem', height: '2rem' }} />
                     </IconButton>
                 </Toolbar>
             </AppBar>

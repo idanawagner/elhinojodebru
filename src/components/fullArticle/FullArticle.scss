@@ -49,13 +49,26 @@
         flex-wrap: wrap;
     }
 
-    .article-image {
-        max-width: 40%;
-        height: auto;
-        border-radius: 8px;
-        object-fit: cover;
-        flex-shrink: 0;
+    .article-container-image {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        gap: .5rem;
+
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        p {
+            font-size: .8rem;
+
+        }
     }
+
 
     .intro-text {
         flex: 1;
@@ -72,6 +85,11 @@
             margin-bottom: 1rem;
             line-height: 1.6;
         }
+    }
+
+    .article-link {
+        text-decoration: none;
+        align-self: flex-end;
     }
 
 }

@@ -1,11 +1,78 @@
 import img1 from '@/assets/images/press/article-1.png';
-import img2 from '@/assets/images/press/luisjaime.png';
+import luisJaime from '@/assets/images/press/luisjaime.png';
 import img3 from '@/assets/images/press/article-3.png';
 import PabloGrahmann from '@/assets/images/press/Pablo-Grahmann.jpg';
+import DanielMarcosYGonzalo from '@/assets/images/press/DanielGambetta-MarcosBerrutti-GonzaloBru.jpg';
 
 export const articles = [
     {
+        id: 0,
+        title: 'Derribando mitos! El nuevo siglo nos encontró...',
+        text: `Derribando mitos! El nuevo siglo nos encontró con la cabaña en plena expansión. Ya estábamos con el proyecto maduro; aquella hacienda moderada y fértil, respondía con fluidez a los programas de cría controlada con toma de datos, en campos alquilados, siempre un problema a resolver, sobre todo cuando vencían los contratos y había que salir con las vacas para otro lado.
+Comenzamos por aquellos tiempos con Breed Plan, ya que al no tener hacienda registrada, las mediciones genéticas no las podíamos correr por ERA.
+Nuestro rodeo de aquellos años era mayoritariamente colorado, de hecho todos los toros que habíamos usado desde 1991, eran de esa variedad. Los toros negros que salían eran heterocigotas, provenían de las fundadoras, aquellas recordadas “Veteranas” de todas las batallas, que eran todas negras.
+La línea genética que se había originado con la introducción de Pioneer, había generado una línea recta sucesoria, seguida fielmente por Ideal, Centenario, Sucesor, Impacto y Milenio, los grandes padres de aquellos tiempos, nos dio una consistencia genética que recuerdo con sorpresa todavía.
+Cuando uno mira para atrás, se da cuenta de que hacíamos intuitivamente, algunas cosas a las cuales la recién pudimos definir muchos años más tarde. Aquello era un borrador del linebreeding que hacemos hoy.
+Por aquellos tiempos era una “locura” cruzar animales emparentados, y toda cabaña para preciarse de tal, tenía que hacer todo el tiempo los inevitables “cambios de sangre”. Por azar o quizá por convicción, nunca hicimos eso, y por mucho tiempo los únicos padres que se usaron fueron los 6 que nombre más arriba, y que todos y cada uno era hijo del anterior.
+Ahí se generó una situación tan interesante como inesperada, ya que los toros de cada etapa, se cruzaban con sus hermanas, madres, abuelas, tías, y otros parientes. Podemos decir que para nosotros, ahí se caía otro mito…ese rodeo consanguíneo...como producía y que fertilidad y eficiencia tenia !!!
+Todo eso constaba en planillas Excel, muy completas, la verdad es que mediamos y anotábamos TODO, y podíamos decir de cada vaca su genealogía y datos productivos, sin margen de error. Era como si fueran de pedigree!
+Todo cambió un día de Septiembre de 1999, cuando fuimos “de curiosos” a un remate en Daireaux, de una cabaña que yo jamás había oído nombrar… “El Hinojo de Bru”.
+Cuando llegamos con mi gran cliente, pero sobre todo amigo, Alfredo Giusti, , antes de llegar a los corrales, agarramos un orden de venta, y tuvimos nuestro primer shock, que hoy visto a la distancia, es gracioso de contar: los toros no tenían Prueba de Capacidad de Servicio! A nosotros no se nos hubiera ocurrido comprar un toro sin ese dato, éramos fundamentalistas!
+Alfredo me miró, como diciendo qué hacemos acá…y me dijo sin dudar…VAMOS!
+No recuerdo como pasaron los siguientes segundos, o minutos, solo que en seguida, ya estábamos en los corrales mirando los toros.
+Piensen los que están leyendo esto, el primer impacto para unos apasionados de la ganadería como nosotros, al ver por primera vez las vacas y toros escoceses de El Hinojo. Una fila de 100 y pico toros con una uniformidad que yo nunca había visto, y unas vaquillonas que parecían salidas de un cuadro inglés del siglo 19.
+Un programa genético que te puede gustar o no, pero 100% consistente, la sana tozudez de un criador para seguir sus convicciones contra viento y marea, eso era lo que emanaba esa feria aquel día primaveral de 1999.
+Parecía imposible resistirse a probar algo de eso que estábamos mirando. Y empezamos a revisar algunos toros.
+En ese remate, estaba empezando a pasar algo que después se volvió corriente: la influencia de El Hinojo de Bru en la ganadería argentina.
+Cuando pasabas de un corral al otro, te cruzabas con el administrador de La Biznaga, con el dueño de CIIADO Horacio Hernández, con Carlos Sackmann Muriel, la gente de Don Benjamín, Juan Adolfo Lafontaine, Juan Marin Narbaitz, y un montón de gente más.
+Ese día CABA compro a Haymount 4180, Sackmann compro a Jewlian 4214 y a Scotish, Juan Adolfo compro otro PP, CIIADO compro a Optimo, y nosotros compramos a medias con Angus de Giusti al después famoso El Abra Witbert 4145 “Bombón Escocés”, el primer toro NEGRO, y ademas COMPRADO (un tema no menor para nuestra filosofia de selección) , que íbamos a usar en Las Veteranas.
+Ese día, fue nuestra primera experiencia con hacienda de pedigree, yo realmente, todavía no sabía bien qué bicho me había picado, solo quería probar algo de esos toros realmente lindos, blandos, armónicos y de cabezas perfectas.
+Pero algo había cambiado para siempre…no puedo con exactitud, definir 100% para que lado, pero en eso estamos 21 años después.
+La foto que acompaña es de "Bombon Escoces" en colecta en Nogales de Di Tella, en Navarro, a los 5-6 años.
+
+Por Andrés Cornejo.
+`,
+        date: 'Julio, 2024',
+        image: {
+            src: img1,
+            alt: 'Foto cabaña El Hinojo de Bru',
+            imageCaption: '',
+        },
+        link: '',
+    },
+    {
         id: 1,
+
+        title: 'El Hinojo: Un rodeo Aberdeen Angus escocés',
+        text: `El Hinojo de Bru, una cabaña de Coronel Suárez en la provincia de Buenos Aires, es uno de los muy pocos grupos en el mundo que conserva toda su hacienda absolutamente cerrada a otra genética que no sea de sus propios toros Aberdeen Angus, «y que no tiene ninguna influencia de la genéticas americanas y canadienses posteriores a la década del 60», según comentó el Dr. Marcos Berrutti. En definitiva, un plantel de genética 100% escocesa, del Angus original.
+
+        Es establecimiento ubicado en la zona de Cerro de la Ventana, una zona agrícola ganadera, pertenece al Sr. Luis Jaime Bru y familia. El Palenque Rural dialogó con el administrador de la cabaña desde hace cinco años, Ernesto Mendoza, reafirmó que el objetivo es continuar con el Aberdeen Angus de esa línea escocesa pura.
+
+Se trabaja con 19 rodeos que son familias, «en la cual cada toro tiene su vaca», indicó. Un sistema que concitó mucho la atención de la delegación uruguaya, además la uniformidad de la hacienda, haciendo muchas consultas en cómo se trabaja, como está organizada la cabaña.
+
+«El emprendimiento desde 7.500 hectáreas aproximadamente divido en cinco campos; no quedamos con novillos, tenemos un remate anual siempre en septiembre que es donde los vendemos. La vaca vieja queda en el campo hasta el último ternero; la que sí después tiene algún problema va al mercado», explicó.
+
+Las vacas de plantel permanecen en el campo hasta que se mueren, agregó. El ternero no es muy grande. «Tanto para toro como para novillo, esta hacienda es espectacular, porque es fácil de engorde, es mansa –eso tiene mucho que ver–, porque favorece a todos», dijo.
+
+En su opinión el Aberden Angus no tiene que ser ni muy chico ni tampoco muy grande, «me parece que apunta a un frame 5 o un 4, por ahí». Los toros padres de la cabaña tienen un frame de 5 y el resto tendrá un promedio de frame 4,5 y así se ha mantenido durante años.
+
+Estima Mendoza que la ganadería argentina apunta al campo, «al engorde al campo porque es lo más sano. Nosotros, por cierto, no damos grano; lo nuestro es a base de pasto, en algún caso concreto podemos suplementar, pero lo primordial es pasto».
+
+El administrador de El Hinojo recomienda a quienes quieran meterse en una única línea de ganado, seguir esa línea. Le va a costar capaz que algunos años, pero dará luego satisfacciones».
+
+Publicado por Gastón Aldabe
+`,
+        date: 'Mayo, 2022',
+        image: {
+            src: DanielMarcosYGonzalo,
+            alt: 'Pablo-Grahmann',
+            imageCaption:
+                'Daniel Gambetta, Marcos Berrutti y Gonzalo Bru, hijo del principal de la cabaña El Hinojo.',
+        },
+        link: 'https://palenqueagropecuario.com.uy/el-hinojo-un-rodeo-aberdeen-angus-escoces/',
+    },
+    {
+        id: 2,
 
         title: 'Genética única que pocos conocen',
         text: `Con una oferta consistente de toros Angus para vaquillonas de 15 meses, una joven cabaña de la Cuenca del Salado apunta a posicionarse en su zona. Calidad de punta a menores precios y financiamiento conveniente, son sus estrategias. El próximo remate, una oportunidad para criadores exigentes.
@@ -42,45 +109,15 @@ Para finalizar, Born destacó: “somos una cabaña joven, con experiencia famil
 
 Por Liliana Rosenstein, Editora de Valor Carne 
 `,
-        date: 'Agosto 2016',
+        date: 'Agosto, 2016',
         image: {
             src: PabloGrahmann,
             alt: 'Pablo-Grahmann',
+            imageCaption: 'Pablo Grahmann.',
         },
         link: 'https://www.valorcarne.com.ar/genetica-unica-que-pocos-conocen/',
     },
-    {
-        id: 2,
-        title: 'Derribando mitos! El nuevo siglo nos encontró...',
-        text: `Derribando mitos! El nuevo siglo nos encontró con la cabaña en plena expansión. Ya estábamos con el proyecto maduro; aquella hacienda moderada y fértil, respondía con fluidez a los programas de cría controlada con toma de datos, en campos alquilados, siempre un problema a resolver, sobre todo cuando vencían los contratos y había que salir con las vacas para otro lado.
-Comenzamos por aquellos tiempos con Breed Plan, ya que al no tener hacienda registrada, las mediciones genéticas no las podíamos correr por ERA.
-Nuestro rodeo de aquellos años era mayoritariamente colorado, de hecho todos los toros que habíamos usado desde 1991, eran de esa variedad. Los toros negros que salían eran heterocigotas, provenían de las fundadoras, aquellas recordadas “Veteranas” de todas las batallas, que eran todas negras.
-La línea genética que se había originado con la introducción de Pioneer, había generado una línea recta sucesoria, seguida fielmente por Ideal, Centenario, Sucesor, Impacto y Milenio, los grandes padres de aquellos tiempos, nos dio una consistencia genética que recuerdo con sorpresa todavía.
-Cuando uno mira para atrás, se da cuenta de que hacíamos intuitivamente, algunas cosas a las cuales la recién pudimos definir muchos años más tarde. Aquello era un borrador del linebreeding que hacemos hoy.
-Por aquellos tiempos era una “locura” cruzar animales emparentados, y toda cabaña para preciarse de tal, tenía que hacer todo el tiempo los inevitables “cambios de sangre”. Por azar o quizá por convicción, nunca hicimos eso, y por mucho tiempo los únicos padres que se usaron fueron los 6 que nombre más arriba, y que todos y cada uno era hijo del anterior.
-Ahí se generó una situación tan interesante como inesperada, ya que los toros de cada etapa, se cruzaban con sus hermanas, madres, abuelas, tías, y otros parientes. Podemos decir que para nosotros, ahí se caía otro mito…ese rodeo consanguíneo...como producía y que fertilidad y eficiencia tenia !!!
-Todo eso constaba en planillas Excel, muy completas, la verdad es que mediamos y anotábamos TODO, y podíamos decir de cada vaca su genealogía y datos productivos, sin margen de error. Era como si fueran de pedigree!
-Todo cambió un día de Septiembre de 1999, cuando fuimos “de curiosos” a un remate en Daireaux, de una cabaña que yo jamás había oído nombrar… “El Hinojo de Bru”.
-Cuando llegamos con mi gran cliente, pero sobre todo amigo, Alfredo Giusti, , antes de llegar a los corrales, agarramos un orden de venta, y tuvimos nuestro primer shock, que hoy visto a la distancia, es gracioso de contar: los toros no tenían Prueba de Capacidad de Servicio! A nosotros no se nos hubiera ocurrido comprar un toro sin ese dato, éramos fundamentalistas!
-Alfredo me miró, como diciendo qué hacemos acá…y me dijo sin dudar…VAMOS!
-No recuerdo como pasaron los siguientes segundos, o minutos, solo que en seguida, ya estábamos en los corrales mirando los toros.
-Piensen los que están leyendo esto, el primer impacto para unos apasionados de la ganadería como nosotros, al ver por primera vez las vacas y toros escoceses de El Hinojo. Una fila de 100 y pico toros con una uniformidad que yo nunca había visto, y unas vaquillonas que parecían salidas de un cuadro inglés del siglo 19.
-Un programa genético que te puede gustar o no, pero 100% consistente, la sana tozudez de un criador para seguir sus convicciones contra viento y marea, eso era lo que emanaba esa feria aquel día primaveral de 1999.
-Parecía imposible resistirse a probar algo de eso que estábamos mirando. Y empezamos a revisar algunos toros.
-En ese remate, estaba empezando a pasar algo que después se volvió corriente: la influencia de El Hinojo de Bru en la ganadería argentina.
-Cuando pasabas de un corral al otro, te cruzabas con el administrador de La Biznaga, con el dueño de CIIADO Horacio Hernández, con Carlos Sackmann Muriel, la gente de Don Benjamín, Juan Adolfo Lafontaine, Juan Marin Narbaitz, y un montón de gente más.
-Ese día CABA compro a Haymount 4180, Sackmann compro a Jewlian 4214 y a Scotish, Juan Adolfo compro otro PP, CIIADO compro a Optimo, y nosotros compramos a medias con Angus de Giusti al después famoso El Abra Witbert 4145 “Bombón Escocés”, el primer toro NEGRO, y ademas COMPRADO (un tema no menor para nuestra filosofia de selección) , que íbamos a usar en Las Veteranas.
-Ese día, fue nuestra primera experiencia con hacienda de pedigree, yo realmente, todavía no sabía bien qué bicho me había picado, solo quería probar algo de esos toros realmente lindos, blandos, armónicos y de cabezas perfectas.
-Pero algo había cambiado para siempre…no puedo con exactitud, definir 100% para que lado, pero en eso estamos 21 años después.
-La foto que acompaña es de "Bombon Escoces" en colecta en Nogales de Di Tella, en Navarro, a los 5-6 años.
-`,
-        date: 'Julio 2024',
-        image: {
-            src: img1,
-            alt: 'Foto cabaña El Hinojo de Bru',
-        },
-        link: 'https://linkanota.com',
-    },
+
     {
         id: 3,
         title: 'Recuerdos del futuro',
@@ -120,14 +157,15 @@ Puedo criticar del A. Angus actual que le cuesta engordar, que no tiene buenos a
 El asesor Veterinario de un rodeo Angus de la Pampa, sobre el que se han usado nuestros toros, observa que se han producido vigor híbrido por la distancia genética que hay entre ambos grupos de animales. Salen terneros gordos, que expresan una fuerza similar a la de una cruza.
 
 
-Nota realizada por la revista Informe Ganadero, 10 de septiembre de 1999. Pag. 8
+Nota realizada por la revista Informe Ganadero, 10 de septiembre de 1999.
 `,
-        date: '',
+        date: 'Septiembre, 1999',
         image: {
-            src: img2,
-            alt: 'Descripción de la imagen de la nota 2',
+            src: luisJaime,
+            alt: 'Foto Luis Jaime Bru',
+            imageCaption: 'Luis Jaime Bru.',
         },
-        link: 'https://linkanota2.com',
+        link: '',
     },
     {
         id: 4,
@@ -140,8 +178,9 @@ Porque todos los modelos de producción exitosos se asientan sobre “hacienda n
         date: '',
         image: {
             src: img3,
-            alt: 'Descripción de la imagen de la nota 2',
+            alt: 'Foto cabaña El Hinojo de Bru',
+            imageCaption: '',
         },
-        link: 'https://linkanota2.com',
+        link: '',
     },
 ];

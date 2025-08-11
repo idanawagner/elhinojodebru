@@ -1,5 +1,5 @@
 // src/pages/FullArticle.jsx
-import { useParams } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
 import { articles } from '@/data/press-data';
 import './FullArticle.scss';
 export default function FullArticle() {
@@ -20,14 +20,20 @@ export default function FullArticle() {
             </div>
 
             <div className="article-intro">
-                <img
-                    src={article.image.src}
-                    alt={article.image.alt}
-                    className="article-image"
-                />
+                <div className="article-container-image">
+                    <img
+                        src={article.image.src}
+                        alt={article.image.alt}
+                        className="article-image"
+                    />
+                    <p>
+                        {article.image.imageCaption !== '' &&
+                            article.image.imageCaption}
+                    </p>
+                </div>
 
                 <div className="intro-text">
-                    {/* Primeros 2 párrafos (por ejemplo) */}
+                    {/* Primeros 2 párrafos */}
                     {article.text
                         .split('\n')
                         .slice(0, 3)
@@ -41,11 +47,21 @@ export default function FullArticle() {
                 {/* Resto del texto */}
                 {article.text
                     .split('\n')
-                    .slice(2)
+                    .slice(3)
                     .map((line, index) => (
                         <p key={index}>{line.trim()}</p>
                     ))}
             </div>
+            {article.link !== '' && (
+                <NavLink
+                    to={article.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="article-link"
+                >
+                    {'Leer artículo original ↗'}
+                </NavLink>
+            )}
         </article>
     );
 }

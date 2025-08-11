@@ -10,6 +10,7 @@ type Article = {
     image: {
         src: string;
         alt: string;
+        imageCaption: string;
     };
     link: string;
 };
