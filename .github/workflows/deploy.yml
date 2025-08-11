@@ -16,5 +16,5 @@ jobs:
                   username: elhinojo
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   script: |
-                      cd /domins/staging.elhinojodebru.com.ar/public_html  # ruta donde está tu proyecto en hosting
+                      cd /domains/staging.elhinojodebru.com.ar/public_html  # ruta donde está tu proyecto en hosting
                       git pull origin main
