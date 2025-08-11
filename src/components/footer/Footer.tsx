@@ -35,17 +35,26 @@ const Footer = () => {
                         <p>administración@elhinojodebru.com.ar</p>
                     </Link>
                 </div>
-                <p className="footer-credits">
-                    © {new Date().getFullYear()} Cabaña El Hinojo de Bru — Sitio
-                    desarrollado por{' '}
-                    <NavLink
-                        to="https://www.instagram.com/modo_cm/?hl=es"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                <div className="footer-credits">
+                    <p className="footer-copyright">
+                        © {new Date().getFullYear()} Cabaña El Hinojo de Bru —
+                    </p>
+
+                    <p
+                        className=" footer-credits-link"
+                        style={{ marginLeft: '4px' }}
                     >
-                        {'modoCM'}
-                    </NavLink>
-                </p>
+                        Powered by
+                        <NavLink
+                            to="https://www.instagram.com/modo_cm/?hl=es"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ marginLeft: '4px' }}
+                        >
+                            modoCM | Idana Wagner Cabrera
+                        </NavLink>
+                    </p>
+                </div>
             </div>
         </footer>
     );

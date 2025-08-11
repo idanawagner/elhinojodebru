@@ -3,12 +3,11 @@
 .footer {
     background-color: $color-primary-bg;
     font-size: 1.2rem;
-
-    padding: 2rem;
+    padding: 2rem 2rem .5rem;
     text-align: center;
     font-size: 0.875rem;
     display: flex;
-    @include responsive-height(30vh);
+    // @include responsive-height(30vh);
 
 
     &-content {
@@ -61,24 +60,28 @@
 
         .footer-credits {
             display: flex;
-            justify-content: flex-start;
             font-size: .8rem;
             color: $color-white;
-            font-family: $font-title-bold;
             align-self: center;
             width: 100%;
+            flex-wrap: wrap;
 
             @include mobile {
                 justify-content: flex-end;
             }
 
-            a {
-                color: inherit; // Mantiene el color del texto
-                text-decoration: none; // Elimina el subrayado
-                transition: color 0.3s;
 
-                &:hover {
-                    color: $color-secondary; // Cambia el color al pasar el mouse
+            &-link {
+
+                a {
+                    color: inherit; // Mantiene el color del texto
+                    text-decoration: none; // Elimina el subrayado
+                    transition: color 0.3s;
+                    font-family: $font-title-bold;
+
+                    &:hover {
+                        color: $color-yellow // Cambia el color al pasar el mouse
+                    }
                 }
             }
         }
