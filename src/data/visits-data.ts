@@ -6,12 +6,15 @@ import five from '@/assets/images/visits/visit-5.jpg';
 import six from '@/assets/images/visits/visit-6.jpg';
 import seven from '@/assets/images/visits/visit-7.jpg';
 import eight from '@/assets/images/visits/visit-8.jpg';
+import nine from '@/assets/images/visits/visit-9.jpg';
+import ten from '@/assets/images/visits/visit-10.jpg';
+import eleven from '@/assets/images/visits/visit-11.jpg';
+import twelve from '@/assets/images/visits/visit-12.jpg';
+import thirteen from '@/assets/images/visits/visit-13.jpg';
+import fourteen from '@/assets/images/visits/visit-14.jpg';
+import fifteen from '@/assets/images/visits/visit-15.jpg';
 // import imgPaulBrowne from '@/assets/images/visits/PaulBrowne.png';
 export const visits = [
-    // {
-    //     id: 0,
-    //     image: imgPaulBrowne,
-    // },
     {
         id: 1,
         image: one,
@@ -43,5 +46,33 @@ export const visits = [
     {
         id: 8,
         image: eight,
+    },
+    {
+        id: 9,
+        image: nine,
+    },
+    {
+        id: 10,
+        image: ten,
+    },
+    {
+        id: 11,
+        image: eleven,
+    },
+    {
+        id: 12,
+        image: twelve,
+    },
+    {
+        id: 13,
+        image: thirteen,
+    },
+    {
+        id: 14,
+        image: fourteen,
+    },
+    {
+        id: 15,
+        image: fifteen,
     },
 ];

@@ -1,0 +1,9 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/utilities' as *;
+
+.fixedButton {
+    @include button($color: $color-yellow, $bg: $color-primary);
+    border: 2px solid $color-yellow ;
+    padding: .5rem 1.5rem;
+}

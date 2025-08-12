@@ -1,6 +1,5 @@
 import SliderComponent from '@/components/sliderComponent/SliderComponent';
 import { visits } from '@/data/visits-data';
-// import imgPaulBrowne from '@/assets/images/visits/PaulBrowne.png';
 import './Visits.scss';
 const Visits = () => {
     const settings = {
@@ -36,7 +35,6 @@ const Visits = () => {
                     Browne quien manifestó que el rodeo de El Hinojo es el único
                     conocido por la no influencia del new type en el mundo.
                 </p>
-                {/* <img src={imgPaulBrowne} alt="" /> */}
             </div>
             <SliderComponent items={visits} settings={settings} />{' '}
         </div>

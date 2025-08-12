@@ -3,10 +3,70 @@ import luisJaime from '@/assets/images/press/luisjaime.png';
 import img3 from '@/assets/images/press/article-3.png';
 import PabloGrahmann from '@/assets/images/press/Pablo-Grahmann.jpg';
 import DanielMarcosYGonzalo from '@/assets/images/press/DanielGambetta-MarcosBerrutti-GonzaloBru.jpg';
+import equipoPasoReal from '@/assets/images/press/equipoPasoReal.webp';
 
 export const articles = [
     {
         id: 0,
+        title: 'Paso Real presenta su genética Angus escocés',
+        text: `La cabaña de Juan Manuel Canesa expondrá su producción en base a pasturas orgánicas el viernes 7, al mediodía, en la Expo Durazno.
+
+        En pleno corazón de la costa de Maldonado, donde el turismo suele ser la principal actividad económica, la cabaña Paso Real ha apostado por una ganadería de alto nivel genético. Su fundador y propietario, Juan Manuel Canesa, recibió al equipo de Hablemos de Agro en su establecimiento en José Ignacio para compartir su experiencia con el Angus escocés y el desafío de desarrollar un rodeo adaptado a la región. 
+        
+        La historia de Paso Real comienza en 2020, en medio de la pandemia, cuando Canesa y su equipo decidieron cambiar la orientación de su ganado. “Arrancamos con Hereford, pero queríamos un animal más rústico a nivel pastoril para la zona”, explicó. La búsqueda de un Angus con estas características los llevó hasta Coronel Suárez, en la provincia de Buenos Aires, Argentina, donde encontraron la genética que buscaban en la cabaña Bru.
+
+El vínculo con la cabaña El Hinojo se volvió clave en el desarrollo del proyecto. “Es una línea hermética totalmente, y nuestra intención fue conservar esa originalidad 100% escocesa”, señaló Canesa. Con el objetivo de mantener esta pureza genética, Paso Real realizó en marzo de 2023 la importación más grande de ganado -particularmente de Angus escocés- en Uruguay hasta la fecha. “Trajimos más de 200 animales, incluyendo vacas de cría con sus terneros, vaquillonas, toros y terneros de sobreaño”, detalló.
+
+El proceso de selección fue minucioso y requirió el trabajo conjunto de expertos uruguayos y argentinos. “Literalmente nos abrieron las porteras en El Hinojo para que eligiéramos la hacienda”, contó Canesa. Sin embargo, la importación de ganado en pie presenta importantes desafíos logísticos y sanitarios. “En Uruguay se importan solo 7 u 8 animales en pie por año. Nosotros trajimos casi 300, cumpliendo con todos los requisitos sanitarios”, destacó. El primer viaje demandó dos días, con altas temperaturas y restricciones para bajar a los animales, antes de completar la cuarentena obligatoria.
+
+Una de las claves del proyecto de Paso Real es su compromiso con la ganadería basada en pasturas orgánicas. “El animal tenía que demostrar su performance en estos campos, y eso fue lo que vimos. Por eso hicimos el esfuerzo de traer esta genética”, subrayó. La adaptabilidad del Angus escocés ha sido excelente: “A los tres meses de llegar ya estaban con toros y preñados. Nos sorprendió la rusticidad de esta genética”, aseguró Canesa.
+
+Con un modelo de producción que apuesta por la sostenibilidad y la ganadería orgánica, Paso Real busca posicionarse como un referente en el rubro. “Queremos que la gente conozca este camino y vea el valor de estos animales en nuestros campos”, concluyó Canesa, adelantando que el viernes 7 exhibirán sus ejemplares en la Expo Durazno, una de las principales vitrinas ganaderas del país.
+
+La genética fundacional del angus escocés llega a Uruguay de la mano de la cabaña Paso Real y su asesor genético, Marcos Berrutti. El experto repasó la historia de esta línea genética y los aportes que promete para la ganadería uruguaya.
+
+El vínculo de Berrutti con la familia Bru, propietarios del establecimiento El Hinojo en Argentina, se remonta a décadas atrás. “Desde que supe de la existencia de un rodeo que mantenía la línea fundacional sin influencia de Norteamérica, me interesé en su historia y en su desarrollo. He visitado la estancia en múltiples oportunidades, aprendiendo sobre su selección y consolidando un vínculo con la familia Bru que trasciende lo profesional”, relató el asesor.
+
+Con este bagaje, Berrutti fue pieza clave en la importación de esta genética a Uruguay, respondiendo a una necesidad concreta de Paso Real: “Interpretar qué tipo de animal quería la cabaña fue lo primero. Y la respuesta estaba en un animal pastoril, rústico y eficiente”.
+
+La genética de El Hinojo se caracteriza por producir animales de tamaño moderado, con buen engrasamiento natural y una composición de carne que cumple con las exigencias de la industria. “Es un angus que permite optimizar la producción en sistemas pastoriles, sin perder calidad de carne”, aseguró.
+
+Además de las ventajas productivas, Berrutti subrayó el valor agregado que implica esta genética desde el punto de vista de marca: “El consumidor valora la historia detrás de los productos. Tener un ganado que proviene de una de las pocas cabañas en el mundo que conserva la genética fundacional del angus es un diferencial enorme”.
+
+En cuanto al impacto sobre el mercado, el asesor sostuvo que la tendencia no apunta exclusivamente a animales de carcasas pesadas. “Hoy la demanda está más atomizada. La industria exige pesos altos, pero la eficiencia productiva y la adaptabilidad también juegan un rol clave”. En este sentido, destacó que la genética de El Hinojo favorece la cría con facilidad de parto, precocidad sexual y una capacidad de reserva corporal que mejora la adaptabilidad a los inviernos.
+
+Paso Real ha marcado el rumbo con un rodeo 100% pedigree y con la intención de ampliar su oferta de reproductores en el futuro.
+
+“Es un proyecto que está dando sus primeros pasos, pero con una base genética sólida y un plan de desarrollo claro”, concluyó Berrutti, anticipando que más detalles se conocerán en la próxima exposición en Durazno.
+
+La Sustentabilidad y el Pastoreo Racional. En la entrevista concedida a Hablemos de Agro, el ingeniero agrónomo Juan Miguel Straumann profundizó en el rol del pastoreo racional y la genética Angus escocesa en los sistemas ganaderos de Uruguay. En un país donde la base productiva sigue siendo el campo natural, la sustentabilidad no es solo una tendencia, sino una necesidad.
+
+Straumann destacó que Uruguay cuenta con aproximadamente un millón doscientas mil hectáreas de mejoramiento, un dato que resalta la importancia de la tecnología de insumos en el desarrollo de la producción cárnica. Sin embargo, subrayó que el verdadero sostén de la ganadería nacional sigue siendo el campo natural, un recurso que debe ser protegido y manejado con criterios sustentables.
+
+“El campo no es propiedad del que lo trabaja, sino de las generaciones futuras”, afirmó, haciendo hincapié en la necesidad de implementar sistemas productivos que no solo aprovechen los recursos naturales, sino que los mejoren.
+
+Desde su experiencia como productor, Straumann explicó que el enfoque en Paso Real ha sido el de transformar los sistemas insumos-dependientes en sistemas de procesos. Esto implica aprovechar al máximo los recursos naturales con una eficiencia óptima. En este contexto, la genética Angus escocesa juega un papel clave, ya que se adapta a los desafíos del pastoreo en campo natural.
+
+Nuevo impulso: presentación en Expo Durazno
+
+En la Expo Durazno, el viernes 7 de marzo al mediodía, se presentará la producción de Angus 100% escocés de la cabaña Paso Real. El objetivo es mostrar a productores y cabañeros los beneficios de esta genética, sin competir con otras líneas.
+
+En la Expo Durazno, durante el corte de la jura Angus, se exhibirán vacas de cría con ternero al pie, toros y vaquillonas criados a campo, promoviendo el intercambio de experiencias con el público.
+
+Con esta presentación, Paso Real reafirma su compromiso con la ganadería uruguaya, aportando una genética Angus 100% escocesa, adaptada a los sistemas productivos del país. “Esperemos que Uruguay pueda empezar a recibir esta genética y, quizás, más adelante con un primer remate. Hay que ver qué es lo que pasa en esta zafra de toros”, señaló Canesa. El productor enfatizó que la prioridad es afianzar la cabaña en Uruguay con pasos firmes y generar confianza entre los productores. “Quien quiera venir acá va a encontrar un lugar espectacular para visitar y ver los animales en el campo”, afirmó.
+
+Por Manuela García Pintos.
+`,
+        date: 'Marzo, 2025',
+        image: {
+            src: equipoPasoReal,
+            alt: 'Equipo de Paso Real.',
+            imageCaption: 'Equipo de Paso Real.',
+        },
+        link: 'https://rurales.elpais.com.uy/hablemos-de-agro/paso-real-presenta-su-genetica-angus-escoces',
+    },
+    {
+        id: 1,
         title: 'Derribando mitos! El nuevo siglo nos encontró...',
         text: `Derribando mitos! El nuevo siglo nos encontró con la cabaña en plena expansión. Ya estábamos con el proyecto maduro; aquella hacienda moderada y fértil, respondía con fluidez a los programas de cría controlada con toma de datos, en campos alquilados, siempre un problema a resolver, sobre todo cuando vencían los contratos y había que salir con las vacas para otro lado.
 Comenzamos por aquellos tiempos con Breed Plan, ya que al no tener hacienda registrada, las mediciones genéticas no las podíamos correr por ERA.
@@ -41,7 +101,7 @@ Por Andrés Cornejo.
         link: '',
     },
     {
-        id: 1,
+        id: 2,
 
         title: 'El Hinojo: Un rodeo Aberdeen Angus escocés',
         text: `El Hinojo de Bru, una cabaña de Coronel Suárez en la provincia de Buenos Aires, es uno de los muy pocos grupos en el mundo que conserva toda su hacienda absolutamente cerrada a otra genética que no sea de sus propios toros Aberdeen Angus, «y que no tiene ninguna influencia de la genéticas americanas y canadienses posteriores a la década del 60», según comentó el Dr. Marcos Berrutti. En definitiva, un plantel de genética 100% escocesa, del Angus original.
@@ -72,7 +132,7 @@ Publicado por Gastón Aldabe
         link: 'https://palenqueagropecuario.com.uy/el-hinojo-un-rodeo-aberdeen-angus-escoces/',
     },
     {
-        id: 2,
+        id: 3,
 
         title: 'Genética única que pocos conocen',
         text: `Con una oferta consistente de toros Angus para vaquillonas de 15 meses, una joven cabaña de la Cuenca del Salado apunta a posicionarse en su zona. Calidad de punta a menores precios y financiamiento conveniente, son sus estrategias. El próximo remate, una oportunidad para criadores exigentes.
@@ -119,7 +179,7 @@ Por Liliana Rosenstein, Editora de Valor Carne
     },
 
     {
-        id: 3,
+        id: 4,
         title: 'Recuerdos del futuro',
         text: `Sólo una convicción muy firme hizo posible que las características de la raza Aberdeen Angus, se mantuvieran inalterables hasta hoy en esta cabaña de la Argentina. Cuando ya en Escocia la raza tiene dificultades para identificarse con sus tribus originarias, la Cabaña El Hinojo de Coronel Suárez a través de sus dueños el Sr. Luis Jaime Bru, puede relatar su trayectoria con el mismo tipo de hacienda a través del tiempo. La historia de la raza en la Argentina nos muestra cómo un mismo tipo de animal pudo ser “grande” en los ’50 y “chico” en los ’80.
 
@@ -168,7 +228,7 @@ Nota realizada por la revista Informe Ganadero, 10 de septiembre de 1999.
         link: '',
     },
     {
-        id: 4,
+        id: 5,
         title: '¿Por qué estos toros?',
         text: `Porque como profesionales, hemos visto a lo largo de años, como la inseminación fue un instrumento con efectos a veces más negativos que positivos, con la introducción de toros enormes, que daban problemas de partos, eran padres de vacas que no se preñaban, novillos interminables, y otros múltiples problemas.
 Porque estamos convencidos que para generar cambios positivos en un rodeo, debemos trabajar con toros de genéticas sólida y homogénea, y no con aquellos que son solo el producto de dos padres de buena estructura física, o ganadores en una exposición.

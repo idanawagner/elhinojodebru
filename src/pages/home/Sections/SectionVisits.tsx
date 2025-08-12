@@ -1,4 +1,4 @@
-import imgVisitsHome from '@/assets/images/visits-home.png';
+import imgVisitsHome from '@/assets/images/visits/visit-7.jpg';
 import { Link } from 'react-router-dom';
 
 const SectionVisits = () => {

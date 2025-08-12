@@ -15,6 +15,7 @@ import FullArticle from './components/fullArticle/FullArticle';
 import Contact from './pages/contact/Contact';
 import './styles/main.scss';
 import CatalogComingSoon from './pages/auction/ComingSoonCatalog';
+import FixedButton from './pages/fixedButton/FixedButton';
 // import { useEffect } from 'react';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/auction/genealogy" element={<Genealogy />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
+            <FixedButton />
             <Footer />
         </div>
     );

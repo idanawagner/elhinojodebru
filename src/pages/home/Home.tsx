@@ -6,8 +6,6 @@ import SectionTestimonials from './Sections/SectionTestimonials';
 import Hero from './Sections/Hero';
 import SliderComponent from '@/components/sliderComponent/SliderComponent';
 import { torosPadres } from '@/data/gallery/torosPadres-data';
-import FixedButton from './fixedButton/FixedButton';
-// import { homeSlider } from '@/data/homeSlider';
 
 const Home = () => {
     return (
@@ -20,7 +18,6 @@ const Home = () => {
             <SectionPressArticle />
             <SectionVisits />
             <SectionTestimonials />
-            <FixedButton />
         </>
     );
 };
