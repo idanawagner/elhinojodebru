@@ -19,7 +19,7 @@ const Hero = () => {
             },
         ],
         arrows: false,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: false,
     };

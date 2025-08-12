@@ -5,6 +5,7 @@ import oneMobile from '@/assets/images/home/slider/1mobile.png';
 import twoMobile from '@/assets/images/home/slider/2mobile.png';
 import threeMobile from '@/assets/images/home/slider/3mobile.png';
 import { Link } from 'react-router-dom';
+
 export const homeSlider = [
     {
         id: 1,
