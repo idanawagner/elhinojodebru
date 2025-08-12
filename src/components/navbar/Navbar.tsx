@@ -198,7 +198,6 @@ export default function Navbar() {
                         <img
                             src={logoHeader}
                             alt="Logo Cabaña El Hinojo de Bru"
-                            loading="lazy"
                             className="logo"
                             width={160}
                             height={48}
