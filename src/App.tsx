@@ -16,14 +16,34 @@ import Contact from './pages/contact/Contact';
 import './styles/main.scss';
 import CatalogComingSoon from './pages/auction/ComingSoonCatalog';
 import FixedButton from './pages/fixedButton/FixedButton';
+import { useEffect, useState } from 'react';
+import Loader from './components/loader/Loader';
 // import { useEffect } from 'react';
 
 function App() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const handleLoad = () => {
+            setTimeout(() => {
+                setLoading(false);
+            }, 3000); // pequeño delay para que se vea fluido
+        };
+
+        // Espera a que TODO esté cargado (incluyendo imágenes)
+        window.addEventListener('load', handleLoad);
+
+        return () => {
+            window.removeEventListener('load', handleLoad);
+        };
+    }, []);
     // useEffect(() => {
     //     window.scrollTo(0, 0);
     // }, []);
+
     return (
         <div className="app">
+            {loading && <Loader />}
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
