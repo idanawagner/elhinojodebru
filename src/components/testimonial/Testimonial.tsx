@@ -1,7 +1,7 @@
 interface TestimonialProps {
     author?: string;
     text?: string;
-    key: string | number; // Key is required for React lists
+    key: string | number;
 }
 
 const Testimonial = ({ text, author, key }: TestimonialProps) => {
@@ -14,5 +14,3 @@ const Testimonial = ({ text, author, key }: TestimonialProps) => {
 };
 
 export default Testimonial;
-// This component can be used to display individual testimonials
-// You can pass title, author, and content as props to customize each testimonial

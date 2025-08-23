@@ -29,6 +29,23 @@
             }
         }
 
+        .footer-navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 2rem;
+
+            .footer-link {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-yellow;
+                }
+            }
+
+        }
+
         .footer-socials {
             display: flex;
             justify-content: flex-start;
@@ -37,8 +54,8 @@
             flex-direction: column;
 
             a {
-                color: $color-yellow !important; // Cambia el color de los iconos
-                text-decoration: none; // Elimina el subrayado
+                color: $color-white !important;
+                text-decoration: none;
                 transition: color 0.3s;
                 display: flex;
                 flex-direction: row;
@@ -47,15 +64,10 @@
                 gap: 1rem;
 
                 &:hover {
-                    color: $color-white; // Cambia el color al pasar el mouse
+                    color: $color-yellow !important;
                 }
             }
 
-            span {
-                color: $color-yellow !important; // Cambia el color del texto
-                font-size: 2rem; // Tamaño de fuente más pequeño
-                text-align: center; // Centra el texto debajo del icono
-            }
         }
 
         .footer-credits {

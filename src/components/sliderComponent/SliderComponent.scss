@@ -12,8 +12,6 @@
         @include mobile {
             display: none !important;
         }
-
-
     }
 
     .slick-prev {
@@ -34,7 +32,6 @@
         padding: 1rem;
         border-radius: 8px;
         text-align: start;
-        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
         &:active,
         :focus {
@@ -42,11 +39,13 @@
             border: none;
         }
 
+        &:focus-visible {
+            outline: none
+        }
+
         img {
             width: 100%;
-
             object-fit: cover;
-            // border-radius: 0 3rem 0 0;
             margin-bottom: 1rem;
         }
 

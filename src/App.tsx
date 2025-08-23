@@ -16,34 +16,41 @@ import Contact from './pages/contact/Contact';
 import './styles/main.scss';
 import CatalogComingSoon from './pages/auction/ComingSoonCatalog';
 import FixedButton from './pages/fixedButton/FixedButton';
-import { useEffect, useState } from 'react';
-import Loader from './components/loader/Loader';
+import Conditions from './pages/auction/conditions/Conditions';
+// import { useEffect, useState } from 'react';
+// import Loader from './components/loader/Loader';
 // import { useEffect } from 'react';
 
 function App() {
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
+    // console.log('Render App, loading =', loading);
+    // useEffect(() => {
+    // const handleLoad = () => {
+    //     setTimeout(() => {
+    //         setLoading(false);
+    //     }, 3000); // delay para que se vea fluido
+    // };
 
-    useEffect(() => {
-        const handleLoad = () => {
-            setTimeout(() => {
-                setLoading(false);
-            }, 3000); // pequeño delay para que se vea fluido
-        };
-
-        // Espera a que TODO esté cargado (incluyendo imágenes)
-        window.addEventListener('load', handleLoad);
-
-        return () => {
-            window.removeEventListener('load', handleLoad);
-        };
-    }, []);
+    // if (document.readyState === 'complete') {
+    // setLoading(false);
+    //         // La página ya terminó de cargar (caso producción o recarga rápida)
+    //         handleLoad();
+    // } else {
+    //         // Espera el evento load normalmente
+    // console.log('sigue cargando');
+    //         window.addEventListener('load', handleLoad);
+    //         return () => window.removeEventListener('load', handleLoad);
+    // }
+    // }, []);
     // useEffect(() => {
     //     window.scrollTo(0, 0);
     // }, []);
 
     return (
         <div className="app">
-            {loading && <Loader />}
+            {/* {loading && <Loader />}
+            {!loading && ( */}
+            {/* <> */}
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -65,6 +72,7 @@ function App() {
                 />
                 <Route path="/auction/catalog2" element={<Catalog />} />
                 <Route path="/auction/genealogy" element={<Genealogy />} />
+                <Route path="/auction/conditions" element={<Conditions />} />
                 <Route path="/contact" element={<Contact />} />
             </Routes>
             <FixedButton />

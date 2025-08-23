@@ -13,18 +13,31 @@
     background-color: $color-bg-secondary;
     color: $color-primary;
 
+    @include mobile {
+        margin: 1rem;
+        gap: 0rem;
+
+    }
+
     .article-header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-
         text-align: center;
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
 
         h1 {
             font-size: $font-size-lg;
             color: $color-primary;
             margin-bottom: 0.5rem;
+
+            @include mobile {
+                text-align: start;
+            }
         }
 
         .date {
@@ -33,20 +46,16 @@
         }
     }
 
-    // .content {
-    //     font-family: inherit;
-    //     white-space: pre-wrap;
-    //     /* permite que el texto se ajuste si es largo */
-    //     word-break: break-word;
-    //     line-height: 1.6;
-    // }
-
     .article-intro {
         display: flex;
         gap: 2rem;
         align-items: flex-start;
         margin: 2rem 0;
         flex-wrap: wrap;
+
+        @include mobile {
+            margin: 0;
+        }
     }
 
     .article-container-image {
@@ -54,6 +63,10 @@
         flex-direction: column;
         width: 40%;
         gap: .5rem;
+
+        @include mobile {
+            width: 100%;
+        }
 
         .article-image {
             max-width: 100%;
@@ -87,9 +100,15 @@
         }
     }
 
-    .article-link {
-        text-decoration: none;
-        align-self: flex-end;
+    .article-links-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .article-link {
+            text-decoration: none;
+            align-self: flex-end;
+        }
     }
 
 }

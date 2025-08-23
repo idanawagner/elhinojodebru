@@ -1,0 +1,24 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+@use '@/styles/utilities' as *;
+
+.conditions {
+    margin: $spacing-xl;
+
+    &-title {
+        text-align: center;
+        @include title($color: $color-white, $font: $font-title-heavy);
+        margin-bottom: $spacing-lg;
+    }
+
+    .health {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .list {
+            margin-left: 2rem;
+        }
+    }
+}

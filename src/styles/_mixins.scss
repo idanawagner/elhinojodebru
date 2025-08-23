@@ -25,29 +25,12 @@
     }
 }
 
-// Mixin para contenedor principal
-// @mixin container($max-width: 1200px, $padding: $spacing-md) {
-//     width: 100%;
-//     max-width: $max-width;
-//     margin: 0 auto;
-//     padding: $padding;
-// }
 
-
-// Mixin para texto centrado
-// @mixin text-center($color: $color-black, $font: $font-text, $size: $font-size-md) {
-//     text-align: center;
-//     color: $color;
-//     font-family: $font;
-//     font-size: $size;
-// }
 
 @mixin responsive-padding($pad: $spacing-md) {
     & {
         padding: $pad;
     }
-
-    // padding: $pad;
 
     @include mobile {
         padding: $spacing-lg; // Menos padding en móviles
@@ -87,10 +70,6 @@
     @include tablet {
         grid-template-columns: repeat(2, 1fr); // Dos columnas en tabletas
     }
-
-    // @include desktop {
-    //     grid-template-columns: repeat(3, 1fr); // Tres columnas en pantallas medianas
-    // }
 }
 
 @mixin responsive-height($height: 100vh) {

@@ -10,7 +10,7 @@ const History = () => {
             <div className="history-start">
                 <h2>LA HISTORIA NOS AVALA</h2>
                 <h3>HISTORIA DE UNA RAZA</h3>
-                <p>
+                <p style={{ fontWeight: 'bold' }}>
                     Sólo una convicción muy firme hizo posible que las
                     características de la raza Aberdeen Angus, se mantuvieran
                     inalterables hasta hoy en esta cabaña de la Argentina.
@@ -49,7 +49,7 @@ const History = () => {
                 </p>
             </div>
             <div className="history-1966">
-                <p>
+                <p style={{ fontWeight: 'bold' }}>
                     A partir de 1962 es que se inicia la crianza de animales
                     puros de pedigree, siguiendo el mismo criterio, con las
                     adquisiciones de vaquillonas elegidas en las cabañas "La
@@ -91,7 +91,7 @@ const History = () => {
                 </p>
             </div>
             <div className="history-1989">
-                <p>
+                <p style={{ fontWeight: 'bold' }}>
                     El Sr. Emilio Bru vivió hasta el año 1989 y creía en la
                     calidad de la hacienda que había logrado. Por eso no quiso
                     “modernizar” el tipo de hacienda Hay un hecho que revela la

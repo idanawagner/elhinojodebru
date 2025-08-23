@@ -1,5 +1,5 @@
 // src/pages/FullArticle.jsx
-import { NavLink, useParams } from 'react-router-dom';
+import { Link, NavLink, useParams } from 'react-router-dom';
 import { articles } from '@/data/press-data';
 import './FullArticle.scss';
 export default function FullArticle() {
@@ -52,16 +52,21 @@ export default function FullArticle() {
                         <p key={index}>{line.trim()}</p>
                     ))}
             </div>
-            {article.link !== '' && (
-                <NavLink
-                    to={article.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="article-link"
-                >
-                    {'Leer artículo original ↗'}
-                </NavLink>
-            )}
+            <div className="article-links-container">
+                <Link to="/institutional/press" className="article-link">
+                    Volver a prensa
+                </Link>
+                {article.link !== '' && (
+                    <NavLink
+                        to={article.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="article-link"
+                    >
+                        {'Leer artículo original ↗'}
+                    </NavLink>
+                )}
+            </div>
         </article>
     );
 }

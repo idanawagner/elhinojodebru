@@ -7,6 +7,19 @@ header {
     margin: 0 !important;
 }
 
+.banner {
+    background-color: $color-bg-secondary;
+    justify-items: center;
+
+    &-text {
+
+        color: $color-primary;
+        font-family: $font-text;
+        font-size: .9rem;
+    }
+
+}
+
 .navbar {
     position: relative;
     top: 0;

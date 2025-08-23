@@ -4,6 +4,7 @@
 .visits {
 
     padding: $spacing-xl;
+    position: relative;
 
     &::before {
         position: absolute;
@@ -28,6 +29,26 @@
 
     &-text {
         @include paragraph($color: $color-white, $size: $font-size-md);
+
+    }
+
+    .slick-slide {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: 100vh;
+            object-fit: contain;
+
+            @include mobile {
+                height: 50vh;
+                object-fit: cover;
+                object-position: center;
+
+            }
+        }
 
     }
 }

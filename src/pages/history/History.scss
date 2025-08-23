@@ -24,7 +24,6 @@
         display: grid;
         position: relative;
         @include paragraph($color: $color-primary, $size: $font-size-md);
-        // @include responsive-height (100vh);
         @include responsive-padding($spacing-xl);
 
         &::before {
@@ -35,10 +34,9 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0.9;
+            opacity: 1;
             z-index: -1;
-            filter: blur(5px);
-
+            filter: blur(6px);
             @include responsive-image($width: 100%, $height: auto);
 
         }
@@ -47,7 +45,6 @@
 
     &-1930 {
         position: relative;
-        // padding: $spacing-xl;
         @include responsive-padding($spacing-xl);
 
         &::before {

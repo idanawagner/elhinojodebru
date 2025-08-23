@@ -12,7 +12,6 @@
   z-index: 0;
   @include responsive-height(100vh);
   height: 100vh;
-  // top: -3rem;
 
   @include mobile {
     height: 100vh;
@@ -147,7 +146,7 @@
 }
 
 .section-numbers {
-  margin-bottom: 4rem;
+  margin-bottom: 2em;
 
 
   &__content {
@@ -161,7 +160,6 @@
     margin: 5rem $spacing-xl;
 
     .section-numbers__stats {
-      margin-top: 3rem;
       display: flex;
       justify-content: center;
       gap: $spacing-md;
@@ -210,7 +208,7 @@
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-    border-radius: 8px;
+
 
     &:hover {
       background-color: rgba($color-yellow, 0.2); // Leve transparencia
@@ -361,9 +359,7 @@
 }
 
 .section-visits {
-  // height: 100vh;
   background-color: $color-primary-bg;
-  // @include responsive-height(100vh);
 
 
   &-content {
@@ -429,7 +425,7 @@
   background-color: $color-bg-secondary;
   color: $color-primary;
   padding: $spacing-xl;
-  // @include responsive-height(80vh);
+  padding-bottom: 3rem !important;
   @include responsive-padding();
 
   h2 {
@@ -457,12 +453,11 @@
       background-color: $color-white;
       padding: $spacing-md;
       border-radius: .5rem;
-      // border: 2px solid $color-primary;
       box-shadow: 0 4px 8px rgba($color-black, 0.1);
       margin-bottom: $spacing-md;
 
       .testimonial-text {
-        @include paragraph($color: $color-primary);
+        @include paragraph($color: $color-primary );
 
       }
 

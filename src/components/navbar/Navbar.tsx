@@ -35,6 +35,10 @@ const navLinks: NavLink[] = [
         submenu: [
             { label: 'Genealogía', path: '/auction/genealogy' },
             { label: 'Catálogo online', path: '/auction/catalog' },
+            {
+                label: 'Condiciones de venta',
+                path: '/auction/conditions',
+            },
         ],
     },
     {
@@ -172,6 +176,12 @@ export default function Navbar() {
 
     return (
         <>
+            <div className="banner">
+                <h2 className="banner-text">
+                    Viernes 12 de septiembre Remate Anual - Presencial y por
+                    streaming
+                </h2>
+            </div>
             <AppBar
                 position="static"
                 color="transparent"
@@ -210,7 +220,6 @@ export default function Navbar() {
                             display: { xs: 'none', md: 'flex' },
                             gap: 4,
                             alignItems: 'center',
-                            // position: 'relative',
                         }}
                         onMouseLeave={() => setOpenMenu(null)}
                     >
@@ -227,16 +236,12 @@ export default function Navbar() {
                                     <Button
                                         component={Link}
                                         to={item.path}
-                                        // sx={{ color: 'black', fontWeight: 500 }}
                                         className="nav-link "
                                     >
                                         {item.label}
                                     </Button>
                                 ) : (
-                                    <Button
-                                        // sx={{ color: 'red', fontWeight: 500 }}
-                                        className="nav-link "
-                                    >
+                                    <Button className="nav-link ">
                                         {item.label}
                                     </Button>
                                 )}

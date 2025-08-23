@@ -2,6 +2,8 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import './Contact.scss';
 
 const Contact = () => {
@@ -30,7 +32,7 @@ const Contact = () => {
                                     color: '#25D366',
                                 }}
                             />
-                            +54 0 2923 64-0653
+                            +54 0 2923 64-0654
                         </a>
                     </p>
                     <p>
@@ -222,6 +224,66 @@ const Contact = () => {
                                 }}
                             />
                             @monasterio_tattersall
+                        </a>
+                    </p>
+                    <p>
+                        <strong>Oficina Monasterio</strong>
+                        <br />
+
+                        <p
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                marginTop: '1rem',
+                                gap: '.5rem',
+                            }}
+                        >
+                            <PhoneIcon
+                                sx={{
+                                    marginLeft: '1rem',
+                                    fontSize: {
+                                        xs: 20,
+                                        sm: 25,
+                                        md: 30,
+                                    },
+                                    color: '#ffffffff',
+                                }}
+                            />
+                            [54 11] 43431856⁣
+                        </p>
+                    </p>
+                    <p>
+                        <a
+                            href="https://maps.app.goo.gl/Ha6viw3TeErZrpJK6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <LocationOnIcon
+                                sx={{
+                                    fontSize: {
+                                        xs: 20,
+                                        sm: 25,
+                                        md: 30,
+                                    },
+                                    color: '#ffffffff',
+                                }}
+                            />
+                            Avenida de Mayo 666 Piso 11º, CABA
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:info@monasterio.com.ar">
+                            <EmailIcon
+                                sx={{
+                                    fontSize: {
+                                        xs: 20,
+                                        sm: 25,
+                                        md: 30,
+                                    },
+                                    color: '#fff',
+                                }}
+                            />
+                            info@monasterio.com.ar
                         </a>
                     </p>
                 </div>
