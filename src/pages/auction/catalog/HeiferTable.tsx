@@ -87,11 +87,38 @@ const HeiferTable = () => {
                             )
                             .map((row, rowIndex) => (
                                 <TableRow key={rowIndex}>
-                                    {row.map((cell, cellIndex) => (
-                                        <TableCell key={cellIndex}>
-                                            {cell}
-                                        </TableCell>
-                                    ))}
+                                    {row.map((cell, cellIndex) => {
+                                        // Caso especial: columnas 2, 3 y 4 (índices 1, 2 y 3)
+                                        if (
+                                            cellIndex === 1 ||
+                                            cellIndex === 2 ||
+                                            cellIndex === 3
+                                        ) {
+                                            // Solo mostrar la celda en la primera fila de cada grupo de 3
+                                            if (rowIndex % 4 === 0) {
+                                                return (
+                                                    <TableCell
+                                                        key={cellIndex}
+                                                        rowSpan={4}
+                                                    >
+                                                        {cell}
+                                                    </TableCell>
+                                                );
+                                            } else {
+                                                return null; // No dibujar nada, ya está ocupada por el rowSpan
+                                            }
+                                        }
+
+                                        // Columna 1 (índice 0) → se muestra siempre
+                                        return (
+                                            <TableCell
+                                                key={cellIndex}
+                                                // translate="no"
+                                            >
+                                                {cell}
+                                            </TableCell>
+                                        );
+                                    })}
                                 </TableRow>
                             ))}
                     </TableBody>

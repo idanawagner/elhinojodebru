@@ -20,7 +20,7 @@ const BullTable = () => {
     const [filteredData, setFilteredData] = useState<string[][]>([]);
     const [searchText, setSearchText] = useState('');
     const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(20);
+    const [rowsPerPage, setRowsPerPage] = useState(21);
 
     useEffect(() => {
         const parsed = Papa.parse<string[]>(csvData, {
@@ -87,11 +87,35 @@ const BullTable = () => {
                             )
                             .map((row, rowIndex) => (
                                 <TableRow key={rowIndex}>
-                                    {row.map((cell, cellIndex) => (
-                                        <TableCell key={cellIndex}>
-                                            {cell}
-                                        </TableCell>
-                                    ))}
+                                    {row.map((cell, cellIndex) => {
+                                        // Caso especial: columnas 2, 3 y 4 (índices 1, 2 y 3)
+                                        if (
+                                            cellIndex === 1 ||
+                                            cellIndex === 2 ||
+                                            cellIndex === 3
+                                        ) {
+                                            // Solo mostrar la celda en la primera fila de cada grupo de 3
+                                            if (rowIndex % 3 === 0) {
+                                                return (
+                                                    <TableCell
+                                                        key={cellIndex}
+                                                        rowSpan={3}
+                                                    >
+                                                        {cell}
+                                                    </TableCell>
+                                                );
+                                            } else {
+                                                return null; // No dibujar nada, ya está ocupada por el rowSpan
+                                            }
+                                        }
+
+                                        // Columna 1 (índice 0) → se muestra siempre
+                                        return (
+                                            <TableCell key={cellIndex}>
+                                                {cell}
+                                            </TableCell>
+                                        );
+                                    })}
                                 </TableRow>
                             ))}
                     </TableBody>
@@ -105,7 +129,7 @@ const BullTable = () => {
                 onPageChange={handleChangePage}
                 rowsPerPage={rowsPerPage}
                 onRowsPerPageChange={handleChangeRowsPerPage}
-                rowsPerPageOptions={[20, 50, 100]}
+                rowsPerPageOptions={[21, 51, 102]}
                 labelRowsPerPage="Filas por página"
                 sx={{
                     color: 'white',

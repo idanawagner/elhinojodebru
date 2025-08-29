@@ -66,11 +66,7 @@ function App() {
                     path="/institutional/press/article/:id"
                     element={<FullArticle />}
                 />
-                <Route
-                    path="/auction/catalog"
-                    element={<CatalogComingSoon />}
-                />
-                <Route path="/auction/catalog2" element={<Catalog />} />
+                <Route path="/auction/catalog" element={<Catalog />} />
                 <Route path="/auction/genealogy" element={<Genealogy />} />
                 <Route path="/auction/conditions" element={<Conditions />} />
                 <Route path="/contact" element={<Contact />} />

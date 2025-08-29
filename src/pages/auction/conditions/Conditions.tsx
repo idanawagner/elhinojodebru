@@ -5,23 +5,20 @@ const Conditions = () => {
         <section className="conditions">
             {' '}
             <h2 className="conditions-title">Condiciones de venta</h2>
-            <p>
-                Sin comisión a los compradores para y vientres, plazo toros 90
-                días y vientres e invernada 60 días.
-            </p>
+            <p>Comisión sin cargo a los Señores compradores.⁣ ⁣</p>
             <div className="health">
                 <h2>Sanidad</h2>
                 <ul className="list">
                     <li>
                         Toros negativos a las reacciones de Brucelosis y
                         Tuberculosis. Sometidos a revisación por palpación y
-                        medición escrotal. Doble dosis de vacunas: I.B.R. D.V.B.
-                        Leptospirosis Vibriosis, Carbunclo Bacteridiano y dos
-                        raspajes negativos a Tricomoniasis y Vibriosis.{' '}
+                        medición escrotal.⁣ Doble dosis de vacunas: I.B.R.
+                        D.V.B. Leptospirosis Vibriosis, Carbunclo Bacteridiano y
+                        dos raspajes negativos a⁣ Tricomoniasis y Vibriosis.⁣
                     </li>
                     <li>
                         Vaquillonas con control negativo a Brucelosis y
-                        Tuberculosis, garantida su preñez por tacto rectal.
+                        Tuberculosis, garantida su preñez por tacto rectal.⁣
                     </li>
                     <li>Terneras con control negativo a Tuberculosis.</li>
                 </ul>

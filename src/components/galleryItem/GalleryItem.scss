@@ -14,8 +14,7 @@
     max-width: 320px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
     background-color: transparent;
 
     .gallery-image {
@@ -29,7 +28,6 @@
 
     .gallery-title {
         font-size: $font-size-md;
-        // font-weight: bold;
         margin-bottom: $spacing-sm;
         align-self: flex-start;
     }
