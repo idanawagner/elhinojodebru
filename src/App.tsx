@@ -14,43 +14,12 @@ import Press from './pages/institutional/press/Press';
 import FullArticle from './components/fullArticle/FullArticle';
 import Contact from './pages/contact/Contact';
 import './styles/main.scss';
-import CatalogComingSoon from './pages/auction/ComingSoonCatalog';
 import FixedButton from './pages/fixedButton/FixedButton';
 import Conditions from './pages/auction/conditions/Conditions';
-// import { useEffect, useState } from 'react';
-// import Loader from './components/loader/Loader';
-// import { useEffect } from 'react';
 
 function App() {
-    // const [loading, setLoading] = useState(true);
-    // console.log('Render App, loading =', loading);
-    // useEffect(() => {
-    // const handleLoad = () => {
-    //     setTimeout(() => {
-    //         setLoading(false);
-    //     }, 3000); // delay para que se vea fluido
-    // };
-
-    // if (document.readyState === 'complete') {
-    // setLoading(false);
-    //         // La página ya terminó de cargar (caso producción o recarga rápida)
-    //         handleLoad();
-    // } else {
-    //         // Espera el evento load normalmente
-    // console.log('sigue cargando');
-    //         window.addEventListener('load', handleLoad);
-    //         return () => window.removeEventListener('load', handleLoad);
-    // }
-    // }, []);
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
-
     return (
         <div className="app">
-            {/* {loading && <Loader />}
-            {!loading && ( */}
-            {/* <> */}
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
